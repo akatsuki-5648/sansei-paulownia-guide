@@ -1,0 +1,119 @@
+/* 京都皇帝早生桐 Q&A
+   ・クラスは全部 kkqa- で始まる。素のタグ（table / h1 など）に直接は効かせない
+     → WordPress などへ埋め込んでも、外のCSSと互いに干渉しにくい。
+   ・色・文字・余白は下の --kkqa- を変えるだけで全体が変わる。
+   ・1問だけ見た目を変える時は .kkqa-item--問いのid、1分類は .kkqa-cat--分類のid を使う。
+   ・スマホ基準 → 640px でタブレット → 960px で PC（左に目次）。 */
+.kkqa{
+  color-scheme:light;
+  --kkqa-paper:#f8f5ec; --kkqa-cream:#f2ede1; --kkqa-white:#fff;
+  --kkqa-forest:#18221a; --kkqa-leaf:#b9c99a; --kkqa-gold:#a8843f;
+  --kkqa-ink:#1b2117; --kkqa-ink-2:rgba(27,33,23,.72); --kkqa-ink-3:rgba(27,33,23,.5);
+  --kkqa-line:rgba(27,33,23,.14); --kkqa-on-dark:#f8f5ec;
+  --kkqa-sans:"Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  --kkqa-serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  --kkqa-size:17px; --kkqa-radius:6px; --kkqa-tap:44px;
+  --kkqa-gut:clamp(16px,4vw,32px); --kkqa-width:760px; --kkqa-width-wide:1120px; --kkqa-bar-h:64px;
+
+  min-height:100vh;background:var(--kkqa-paper);color:var(--kkqa-ink);
+  font:400 var(--kkqa-size)/1.8 var(--kkqa-sans);overflow-wrap:anywhere;-webkit-text-size-adjust:100%;
+}
+.kkqa,.kkqa *{box-sizing:border-box}
+.kkqa-page{margin:0}
+.kkqa-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+
+/* 上の帯 */
+.kkqa-bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;
+  padding:8px var(--kkqa-gut);padding-top:calc(8px + env(safe-area-inset-top));background:var(--kkqa-paper);border-bottom:1px solid var(--kkqa-line)}
+.kkqa-logo{display:block;width:104px;height:auto}
+.kkqa-lang{display:flex;flex:none;border:1px solid var(--kkqa-forest);border-radius:var(--kkqa-radius);overflow:hidden}
+.kkqa-lang__btn{min-height:var(--kkqa-tap);padding:0 12px;border:0;background:transparent;color:inherit;font:inherit;font-size:15px;cursor:pointer}
+.kkqa-lang__btn[aria-pressed="true"]{background:var(--kkqa-forest);color:var(--kkqa-on-dark)}
+
+/* 全体の枠 */
+.kkqa-layout{max-width:var(--kkqa-width);margin:0 auto;padding:0 var(--kkqa-gut)}
+.kkqa-nav{display:none}
+
+/* はじめ */
+.kkqa-intro{display:grid;gap:18px;padding:20px 0 8px}
+.kkqa-slider{min-width:0}
+.kkqa-slider__track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--kkqa-radius);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.kkqa-slider__track::-webkit-scrollbar{display:none}
+.kkqa-slider__slide{flex:0 0 100%;margin:0;scroll-snap-align:start}
+.kkqa-slider__img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover}
+.kkqa-slider__dots{display:flex;justify-content:center}
+.kkqa-slider__dot{display:grid;place-items:center;width:30px;height:var(--kkqa-tap);padding:0;border:0;background:transparent;cursor:pointer}
+.kkqa-slider__dot::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--kkqa-ink-3)}
+.kkqa-slider__dot[aria-current="true"]::before{background:var(--kkqa-forest)}
+.kkqa-intro__eyebrow{margin:0;color:var(--kkqa-gold);font-size:14px;letter-spacing:.06em}
+.kkqa-intro__title{margin:2px 0 8px;font:600 clamp(28px,7vw,38px)/1.35 var(--kkqa-serif)}
+.kkqa-intro__lead{margin:0;color:var(--kkqa-ink-2)}
+
+/* 検索 */
+.kkqa-search{position:relative;margin-top:18px}
+.kkqa-search__input{width:100%;min-height:52px;padding:0 16px;border:1px solid var(--kkqa-ink-3);border-radius:var(--kkqa-radius);background:var(--kkqa-white);color:inherit;font:inherit}
+.kkqa-search__input:focus{outline:2px solid var(--kkqa-forest);outline-offset:1px}
+.kkqa-count{min-height:1.5em;margin:6px 2px 10px;color:var(--kkqa-ink-2);font-size:14px}
+
+/* トグル共通（分類と問い） */
+.kkqa-cat__head,.kkqa-item__head{display:flex;align-items:center;gap:12px;padding:12px 2px;cursor:pointer;list-style:none;font-weight:600;line-height:1.5}
+.kkqa-cat__head::-webkit-details-marker,.kkqa-item__head::-webkit-details-marker{display:none}
+.kkqa-cat__head::after,.kkqa-item__head::after{content:"";flex:none;width:10px;height:10px;margin:0 6px 0 auto;border-right:2px solid var(--kkqa-forest);border-bottom:2px solid var(--kkqa-forest);transform:rotate(45deg) translate(-2px,-2px);transition:transform .15s}
+.kkqa-cat[open]>.kkqa-cat__head::after,.kkqa-item[open]>.kkqa-item__head::after{transform:rotate(-135deg) translate(-2px,-2px)}
+.kkqa-cat__head:focus-visible,.kkqa-item__head:focus-visible{outline:2px solid var(--kkqa-forest);outline-offset:2px}
+
+/* 分類 */
+.kkqa-cat{border-top:1px solid var(--kkqa-line);scroll-margin-top:calc(var(--kkqa-bar-h) + 8px)}
+.kkqa-cat:last-child{border-bottom:1px solid var(--kkqa-line)}
+.kkqa-cat__head{min-height:72px;font:600 20px/1.45 var(--kkqa-serif)}
+.kkqa-cat__mark{flex:none;display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--kkqa-forest);color:var(--kkqa-on-dark);font:600 19px/1 var(--kkqa-serif)}
+.kkqa-cat__body{padding:0 0 14px}
+
+/* 問い */
+.kkqa-item{border-top:1px solid var(--kkqa-line);scroll-margin-top:calc(var(--kkqa-bar-h) + 8px)}
+.kkqa-item__head{min-height:60px}
+.kkqa-item__from{display:block;color:var(--kkqa-ink-3);font-size:13px;font-weight:400}
+.kkqa-item__body{padding:0 2px 14px}
+.kkqa-item__answer{margin:0;white-space:pre-line}
+.kkqa-item__more{margin:12px 0 0 2px;padding-left:12px;border-left:2px solid var(--kkqa-leaf)}
+.kkqa-item__more>.kkqa-item:first-child{border-top:0}
+.kkqa-item__more>.kkqa-item>.kkqa-item__head{min-height:52px;font-weight:500}
+
+/* 中に入れる部品 */
+.kkqa-note{margin:10px 0 0;padding-left:12px;border-left:3px solid var(--kkqa-gold);color:var(--kkqa-ink-2);font-size:14.5px;line-height:1.7}
+.kkqa-table-wrap{margin-top:12px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.kkqa-table{width:100%;table-layout:fixed;border-collapse:collapse;font-size:clamp(13.5px,3.6vw,15px);line-height:1.5}
+.kkqa-table__cell{padding:8px 5px;border-bottom:1px solid var(--kkqa-line);text-align:left;vertical-align:top;overflow-wrap:break-word;word-break:normal;font-weight:400}
+.kkqa-table__cell--head{background:var(--kkqa-cream);font-weight:600}
+.kkqa-table__cell--head:first-child{width:27%}
+.kkqa-table__cell--row,.kkqa-table__cell--main{font-weight:600}
+.kkqa-figure{margin:12px 0 0}
+.kkqa-figure__img{display:block;width:100%;height:auto;border-radius:var(--kkqa-radius)}
+.kkqa-figure__cap{margin-top:6px;color:var(--kkqa-ink-2);font-size:14px;line-height:1.6}
+.kkqa-video{display:block;width:100%;aspect-ratio:16/9;margin-top:12px;border:0;border-radius:var(--kkqa-radius);background:#000}
+.kkqa-link{display:flex;align-items:center;min-height:var(--kkqa-tap);margin-top:8px;color:var(--kkqa-forest);font-weight:600}
+
+.kkqa-empty{padding:18px 2px;color:var(--kkqa-ink-2)}
+
+/* 下 */
+.kkqa-foot{margin-top:28px;padding:18px 0 calc(32px + env(safe-area-inset-bottom));color:var(--kkqa-ink-2);font-size:14.5px}
+.kkqa-foot__tel{display:flex;align-items:center;justify-content:center;min-height:54px;border-radius:var(--kkqa-radius);background:var(--kkqa-forest);color:var(--kkqa-on-dark);font-weight:600;text-decoration:none}
+.kkqa-foot__text{margin:10px 0 0}
+.kkqa-foot__ver{margin:10px 0 0;color:var(--kkqa-ink-3);font-size:13px}
+.kkqa-foot__copy{margin:14px 0 0;padding-top:12px;border-top:1px solid var(--kkqa-line);font-size:13px;text-align:center}
+
+/* タブレット */
+@media (min-width:640px){
+  .kkqa-logo{width:118px}
+  .kkqa-intro{grid-template-columns:42% 1fr;align-items:center}
+  .kkqa-slider__img{aspect-ratio:3/4}
+}
+/* PC：左に目次 */
+@media (min-width:960px){
+  .kkqa-bar{padding-left:max(var(--kkqa-gut),calc(50vw - var(--kkqa-width-wide)/2));padding-right:max(var(--kkqa-gut),calc(50vw - var(--kkqa-width-wide)/2))}
+  .kkqa-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;max-width:var(--kkqa-width-wide)}
+  .kkqa-nav{display:block;position:sticky;top:calc(var(--kkqa-bar-h) + 12px);align-self:start;padding-top:24px}
+  .kkqa-nav__btn{display:block;width:100%;padding:9px 10px;border:0;border-left:2px solid var(--kkqa-line);background:transparent;color:inherit;font:inherit;font-size:15px;line-height:1.5;text-align:left;cursor:pointer}
+  .kkqa-nav__btn:hover{border-left-color:var(--kkqa-forest);background:var(--kkqa-cream)}
+}
+@media (prefers-reduced-motion:reduce){.kkqa-cat__head::after,.kkqa-item__head::after{transition:none}}

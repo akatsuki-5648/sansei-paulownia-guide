@@ -1,0 +1,319 @@
+/* 京都皇帝早生桐 ショールームQ&A ── 中身はこの1本だけ直す。
+   形：window.KK_QA = [ { id, icon, title:{ja,en}, items:[ 問い ] } ]
+   問い：{ id, q:{ja,en}, a:{ja,en}, table?, blocks?:[ 部品 ], note?:{ja,en}, more?:[ 問い ] }
+   more に入れると、開いた中にさらにトグルが増える（何段でも）。
+   id は他と重ねない。URL の末尾に #id を付けると、その答えが開く。
+   部品（blocks）：
+     {type:"image", src:"img/x.jpg", alt:{ja,en}, caption:{ja,en}}
+     {type:"video", youtube:"動画のID", title:{ja,en}}  または {type:"video", src:"img/x.mp4"}
+     {type:"table", head:{ja:[…],en:[…]}, rows:[{ja:[…],en:[…]}]}
+     {type:"link",  href:"https://…", label:{ja,en}}
+     {type:"note",  text:{ja,en}} */
+window.KK_VERSION = "2026-11-02";
+/* 画面の決まり文句 */
+window.KK_UI = {
+  eyebrow:{ja:"ショールーム Q&A", en:"Showroom Q&A"},
+  title:{ja:"京都皇帝早生桐", en:"Kyoto Emperor Paulownia"},
+  lead:{ja:"知りたいことを押すと、答えが開きます。さらに詳しいことは、答えの下を開いてください。",
+        en:"Tap a question to open the answer. Open the items below an answer for more detail."},
+  search:{ja:"キーワードで探す（例：苗、CO₂）", en:"Search by keyword (e.g. seedlings, CO₂)"},
+  found:{ja:"{n}件見つかりました", en:"{n} found"},
+  none:{ja:"見つかりませんでした。「確認してご連絡します」とお伝えください。", en:"No results. Please say \"We will check and get back to you\"."},
+  tel:{ja:"お電話でのご相談 075-748-9188", en:"Call us: +81-75-748-9188"},
+  foot:{ja:"株式会社SANSEI｜数字は目安で、保証するものではありません。", en:"SANSEI Co., Ltd. | Figures are guides, not guarantees."},
+  ver:{ja:"初期版 ", en:"First version "}
+};
+/* はじめの写真。並べた順に出る。pos は切り抜く時に見せる位置 */
+window.KK_SLIDES = [
+  {src:"img/showroom-1.jpg", pos:"50% 6%", alt:{ja:"ショールームの入口と「京都 皇帝桐」の看板", en:"Showroom entrance with the Kyoto Emperor Paulownia sign"}},
+  {src:"img/showroom-2.jpg", alt:{ja:"灯りの下で育つ桐の苗", en:"Paulownia seedlings growing under lights"}},
+  {src:"img/showroom-3.jpg", alt:{ja:"鉢に植えた桐の苗", en:"Potted paulownia seedlings"}},
+  {src:"img/showroom-4.jpg", alt:{ja:"棚に並ぶ桐の苗", en:"Rows of paulownia seedlings on a shelf"}},
+  {src:"img/showroom-5.jpg", alt:{ja:"桐の苗の葉", en:"Leaves of paulownia seedlings"}},
+  {src:"img/showroom-6.jpg", alt:{ja:"大きさの違う鉢の桐の苗", en:"Paulownia seedlings in pots of different sizes"}},
+  {src:"img/showroom-7.jpg", alt:{ja:"灯りの下の鉢植えの桐", en:"Potted paulownia under lights"}},
+  {src:"img/showroom-8.jpg", alt:{ja:"棚で育つ桐の苗", en:"Paulownia seedlings growing on a shelf"}}
+];
+window.KK_QA = [
+{
+  id:"about", icon:"桐",
+  title:{ja:"京都皇帝早生桐とは", en:"About the tree"},
+  items:[
+    {id:"what",
+      q:{ja:"どんな木ですか？", en:"What kind of tree is this?"},
+      a:{ja:"成長がとても早い桐です。当社が研究開発した品種を、クローン培養で増やしています。植えて4〜5年で大人の木になり、伐ったあとも切り株からまた育ちます。",
+         en:"It is a very fast-growing paulownia. We propagate our own developed variety by clone culture. It reaches maturity in four to five years, and after harvest it grows back from the stump."},
+      more:[
+        {id:"what-name",
+          q:{ja:"「早生桐（そうせいぎり）」とは？", en:"What does \"Soseigiri\" mean?"},
+          a:{ja:"「早生」は早く育つこと、「桐」は日本で古くから使われてきた木です。早く育つ桐という意味です。",
+             en:"\"Sosei\" means early growing, and \"kiri\" is paulownia, a tree long used in Japan. Together: fast-growing paulownia."}},
+        {id:"what-history",
+          q:{ja:"桐は日本とどんな関わりがありますか？", en:"How is paulownia connected to Japan?"},
+          a:{ja:"桐箪笥や琴、下駄など、暮らしの中で長く使われてきました。昔は「娘が生まれたら桐を植え、嫁入りの時に伐って箪笥を作る」といわれたほど、早く育つ木として知られています。「五七の桐」は日本政府の紋章としても使われています。",
+             en:"Paulownia has long been part of daily life in Japan, in chests of drawers, koto harps and geta sandals. People used to say, \"When a daughter is born, plant a paulownia, and make a chest from it when she marries.\" The \"go-shichi no kiri\" crest is also used as an emblem of the Government of Japan."}}
+      ]},
+    {id:"why",
+      q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
+      a:{ja:"スギは30〜40年、ヒノキは40〜50年かかります。早生桐は4〜5年で大人の木になるので、植えた人の代で結果を見られます。伐ったあとも植え直さずに育つので、同じ土地で何度も収穫できます。",
+         en:"Japanese cedar takes 30 to 40 years and cypress 40 to 50. Fast-growing paulownia matures in four to five years, so the person who plants it can see the result. It grows back without replanting, so the same land can be harvested again and again."},
+      note:{ja:"スギ・ヒノキの年数：地方自治体の林業資料による、標準的な伐採の時期。", en:"Cedar and cypress years: standard harvest age in local government forestry materials."},
+      more:[
+        {id:"demand",
+          q:{ja:"桐は今も求められていますか？", en:"Is there still demand for paulownia?"},
+          a:{ja:"はい。国産の桐は、いちばん多かった時の約2%まで減りましたが、桐を使いたい人が減ったわけではありません。足りない分は、海外で育った桐で補われています。短い年数で育つ桐を、もう一度国内で育てる意味はここにあります。",
+             en:"Yes. Japan's paulownia output has fallen to about 2% of its peak, but people still want it. The shortfall is filled by paulownia grown overseas. That is why growing a fast paulownia in Japan again makes sense."},
+          note:{ja:"日本特用林産振興会・日本木材総合情報センターの公表資料より。", en:"From published materials of Japanese forest product associations."}}
+      ]}
+  ]
+},
+{
+  id:"growth", icon:"育",
+  title:{ja:"育ち方", en:"Growth"},
+  items:[
+    {id:"speed",
+      q:{ja:"どのくらいの早さで育ちますか？", en:"How fast does it grow?"},
+      a:{ja:"徳島県吉野川市の圃場では、植えて3年で高さ8m、幹回り72cmを実測しました（開発者の圃場）。",
+         en:"In a field in Yoshinogawa, Tokushima, we measured 8 m in height and a 72 cm trunk girth three years after planting (the developer's field)."},
+      more:[
+        {id:"speed-5",
+          q:{ja:"5年でどのくらいになりますか？", en:"How big will it be at five years?"},
+          a:{ja:"早生桐は一般に、5〜6年で高さ15〜17m、幹回り約1m（直径約32cm）に育つとされています。徳島の圃場の3年間のペースが続いた場合の計算では、5年で幹回り約120cmです。こちらは実測ではなく計算です。",
+             en:"Fast-growing paulownia is generally said to reach 15 to 17 m in height and about 1 m in girth (about 32 cm in diameter) in five to six years. If the three-year pace of the Tokushima field continues, the girth at five years would be about 120 cm. This is a calculation, not a measurement."},
+          note:{ja:"当社の木の記録は、いちばん古いもので3年です。", en:"Our oldest growth record for our own trees is three years."}},
+        {id:"speed-other",
+          q:{ja:"ほかの場所の記録はありますか？", en:"Are there records from other places?"},
+          a:{ja:"大分県豊後大野市：2025年5月に植え、3か月半で全ての木が1.7m超、1年で高さ5〜6m。\n京都府：植えて2年で高さ7m、幹回り46cm。\n北海道札幌市：2025年夏に植え、2026年6月時点で高さ2m。",
+             en:"Bungo-Ono, Oita: planted May 2025; all trees over 1.7 m in three and a half months, and 5 to 6 m in one year.\nKyoto Prefecture: 7 m tall with a 46 cm girth two years after planting.\nSapporo, Hokkaido: planted summer 2025; 2 m tall as of June 2026."},
+          note:{ja:"育ち方は、土づくりと気候で変わります。", en:"Growth varies with soil preparation and climate."}}
+      ]},
+    {id:"regrow",
+      q:{ja:"伐ったあとはどうなりますか？", en:"What happens after harvesting?"},
+      a:{ja:"植え直さず、切り株から新しい芽が伸びて再び育ちます。これを「萌芽更新（ほうがこうしん）」といいます。5〜8年ごとに伐りながら、同じ根で育て続けます。",
+         en:"There is no need to replant. New shoots rise from the stump and grow again. This is called coppicing. The same roots keep growing, with a harvest every five to eight years."},
+      note:{ja:"当社の木で伐採を重ねた実績は、これから積み上げていく段階です。", en:"We are still building our own record of repeated harvests."},
+      more:[
+        {id:"regrow-times",
+          q:{ja:"何回くらい収穫できますか？", en:"How many times can it be harvested?"},
+          a:{ja:"根の寿命は70〜100年とされ、その間に4〜9回の伐採をくり返せるという報告があります。",
+             en:"The roots are said to live 70 to 100 years, and reports say four to nine harvests are possible in that time."}},
+        {id:"regrow-care",
+          q:{ja:"2回目からの手入れは？", en:"What care is needed after the first harvest?"},
+          a:{ja:"切り株からは芽がいくつも出ます。そのままだと細い幹が何本もできるので、1本に絞る手入れがいります。",
+             en:"Several shoots rise from the stump. Left alone, they become many thin trunks, so they need to be pruned to one."}}
+      ]},
+    {id:"where",
+      q:{ja:"どんな場所に植えられますか？", en:"Where can it be planted?"},
+      a:{ja:"いちばん大事なのは水はけです。水が溜まる土地では根が腐ってしまいます。あとは日当たりの良さです。日本なら、水やりをしなくても自然の雨で育つとされています。大分の試験圃場は、もとは15年以上使われていなかった休耕田で、土の対策をして植えました。場所は、ご相談の前に確認してご提案します。",
+         en:"Drainage matters most: roots rot where water collects. Good sunlight comes next. In Japan it is said to grow on natural rainfall without watering. Our trial field in Oita was a rice paddy left unused for over 15 years; we improved the soil before planting. We check each site and advise you."},
+      more:[
+        {id:"where-land",
+          q:{ja:"使っていない田畑にも植えられますか？", en:"Can it be planted on unused farmland?"},
+          a:{ja:"水はけなどの条件が合えば、育てられる可能性があります。ただ、手入れの仕方によっては法律上「農地」のままの扱いになり、「森林」にはなりません。また草や雑木の処理で、はじめの費用はかえって高くなることがあります。植える前に、土地の区分と手続きを確認します。",
+             en:"If conditions such as drainage are right, it may be possible. However, depending on how the land is managed, it can legally stay farmland rather than become forest. Clearing weeds and brush can also raise the initial cost. We check the land category and procedures before planting."}},
+        {id:"where-density",
+          q:{ja:"どのくらいの間隔で植えますか？", en:"How far apart are they planted?"},
+          a:{ja:"約3mの間隔で、1ヘクタールに1,000〜1,100本ほどです。",
+             en:"About 3 m apart, or roughly 1,000 to 1,100 trees per hectare."}},
+        {id:"where-care",
+          q:{ja:"植えたら放っておいても育ちますか？", en:"Will it grow if left alone?"},
+          a:{ja:"いいえ。放っておくと枝が分かれて、幹がまっすぐ伸びません。木材として価値が出るのはまっすぐな幹なので、育ち始めの時期から枝を切ったり、余分な芽を取ったりする手入れがいります。早く育つ分、手入れも早めに必要な木です。",
+             en:"No. Left alone it branches out and the trunk does not grow straight. Timber value lies in a straight trunk, so pruning and removing extra shoots are needed from early on. Because it grows fast, it also needs care early."}},
+        {id:"where-cold",
+          q:{ja:"寒い土地でも育ちますか？", en:"Will it grow in cold regions?"},
+          a:{ja:"早生桐には系統があり、合う気候が違います。寒さに強い系統の報告は主に海外のものです。当社の木では札幌市で育てている記録があります。土地ごとに確認します。",
+             en:"There are different lines of fast-growing paulownia suited to different climates. Reports of cold-hardy lines come mainly from overseas. We have a growth record from Sapporo. We check each site individually."}},
+        {id:"where-sick",
+          q:{ja:"病気の心配はありますか？", en:"Are there disease concerns?"},
+          a:{ja:"桐には「てんぐ巣病」という病気が知られています。日本の湿気の多い気候でどこまで強いかは、地域ごとに確かめていく必要があります。",
+             en:"Paulownia is known to get witches' broom disease. How well it resists in Japan's humid climate needs to be confirmed region by region."}},
+        {id:"where-spread",
+          q:{ja:"周りに広がってしまいませんか？", en:"Could it spread into the surroundings?"},
+          a:{ja:"桐の仲間を外来種として注意している国や地域があります。海外では種を作らない品種も開発されています。国や地域によって決まりが違うので、海外でのご検討は担当者が確認します。",
+             en:"Some countries and regions treat paulownia species as invasive. Non-seeding varieties have been developed overseas. Rules differ by country and region, so a staff member will check for any overseas plans."}}
+      ]}
+  ]
+},
+{
+  id:"wood", icon:"材",
+  title:{ja:"木材と使いみち", en:"Timber and uses"},
+  items:[
+    {id:"wood-feature",
+      q:{ja:"木材の特徴は？", en:"What is the timber like?"},
+      a:{ja:"日本の木の中で最も軽い部類です。湿度が変わっても形がほとんど変わらず、周りの湿気を吸ったり放したりします。桐箪笥が着物を守ってきたのは、この性質があるからです。",
+         en:"It is among the lightest woods in Japan. It hardly changes shape as humidity changes, and it takes in and releases moisture. This is why paulownia chests have protected kimono."},
+      more:[
+        {id:"wood-strong",
+          q:{ja:"軽いと弱くないですか？", en:"Doesn't light mean weak?"},
+          a:{ja:"桐は蜂の巣のような細胞の構造を持っていて、同じ重さで比べると強い木です。ただ、同じ大きさで比べれば金属の方がずっと強いので、使う場所を選びます。",
+             en:"Paulownia has a honeycomb-like cell structure, so it is strong for its weight. Size for size, metal is far stronger, so the right use matters."}},
+        {id:"wood-fire",
+          q:{ja:"燃えにくいのですか？", en:"Is it fire resistant?"},
+          a:{ja:"火がつきにくいわけではありません。熱が中に伝わりにくいのが特徴です。表面が焦げて炭になると、中まで燃え進みにくくなります。昔の金庫の内箱に桐が使われていたのも、このためです。",
+             en:"It does not resist catching fire. Its strength is that heat travels slowly inside it. Once the surface chars, fire struggles to go deeper. This is why paulownia was once used for the inner boxes of safes."}},
+        {id:"wood-bug",
+          q:{ja:"虫には強いですか？", en:"Does it resist insects?"},
+          a:{ja:"タンニンやパウロニンという天然の成分が含まれていて、薬を使わなくても虫が寄りにくいとされています。",
+             en:"It contains natural substances, tannin and paulownin, and is said to keep insects away without chemicals."}},
+        {id:"wood-water",
+          q:{ja:"向いていない使い方はありますか？", en:"What is it not suited to?"},
+          a:{ja:"雨に直接当たる屋外、地面に触れる部分、水回りの構造材には向きません。ずっと濡れていると腐りやすい木です。やわらかいので、傷もつきやすいです。乾いた室内で使うのが向いています。",
+             en:"It is not suited to outdoor use in direct rain, parts touching the ground, or structural parts in wet areas. It rots if kept wet, and it is soft, so it scratches easily. It suits dry indoor use."}}
+      ]},
+    {id:"wood-use",
+      q:{ja:"何に使えますか？", en:"What can it be used for?"},
+      a:{ja:"家具・箪笥、桐箱、琴やギターなどの楽器、下駄、床や天井などの内装、合板などです。当社の桐では、角材、一枚板、額縁のほか、お寺の七夕に寄付した短冊300枚をつくりました。",
+         en:"Furniture and chests, paulownia boxes, instruments such as koto and guitars, geta sandals, interior floors and ceilings, and plywood. From our own paulownia we have made square timber, single-plank boards and picture frames, and 300 tanzaku strips donated to a temple for Tanabata."},
+      more:[
+        {id:"wood-other",
+          q:{ja:"幹のほかにも使えますか？", en:"Can other parts be used?"},
+          a:{ja:"はい。桐は捨てるところがない木といわれます。枝や端材は燃料のペレットに、樹皮やのこ屑は土に混ぜる炭（バイオ炭）にできます。葉は家畜のえさとしての利用が検討されています。世の中では、花は香水の原料、葉は女性用育毛剤の原料に使われている例もあります。",
+             en:"Yes. Paulownia is said to waste nothing. Branches and offcuts can become fuel pellets, and bark and sawdust can become biochar for soil. The leaves are being studied as animal feed. Elsewhere, flowers are used as a perfume ingredient and leaves as an ingredient in women's hair-growth products."},
+          note:{ja:"使われている例のご紹介です。効能・効果をうたうものではありません。えさとして使う場合は、安全性の確認が別に必要です。", en:"These are examples of use, not claims of any effect. Use as feed needs separate safety checks."}}
+      ]},
+    {id:"wood-sell",
+      q:{ja:"育てた木は売れますか？", en:"Can the grown trees be sold?"},
+      a:{ja:"桐は原木市場でも「キリ」として取引されています。成木のまま、または加工して製品として売ることができ、売り先の紹介や加工もご相談いただけます。桐は一般の木材価格の統計に載らない木なので、値段はその都度の確認になります。",
+         en:"Paulownia is traded on log markets as \"kiri\". Trees can be sold as logs or processed into products. We can also advise on buyers and processing. Paulownia is not listed in general timber price statistics, so prices are checked case by case."},
+      note:{ja:"販売価格や収益をお約束するものではありません。", en:"We do not promise any sale price or income."}}
+  ]
+},
+{
+  id:"compare", icon:"比",
+  title:{ja:"スギ・ヒノキとの比較", en:"Compared with cedar and cypress"},
+  items:[
+    {id:"cmp-table",
+      q:{ja:"比べるとどう違いますか？", en:"How do they compare?"},
+      a:{ja:"いちばんの違いは、大人の木になるまでの年数と、伐ったあとに植え直しがいらないことです。",
+         en:"The main differences are the years to maturity and that no replanting is needed after harvest."},
+      table:{
+        head:{ja:["","早生桐","スギ","ヒノキ"], en:["","Fast-growing paulownia","Cedar","Cypress"]},
+        rows:[
+          {ja:["大人の木まで","4〜5年","30〜40年","40〜50年"], en:["Years to maturity","4–5","30–40","40–50"]},
+          {ja:["伐ったあと","切り株からまた育つ","植え直し","植え直し"], en:["After harvest","Regrows from stump","Replant","Replant"]},
+          {ja:["木の軽さ（水を1とした重さ）","0.29（桐）","0.38","0.44"], en:["Weight (water = 1)","0.29 (paulownia)","0.38","0.44"]}
+        ]},
+      note:{ja:"年数：地方自治体の林業資料による標準的な伐採の時期。重さ：乾いた状態の値（気乾比重）。日本木材総合情報センターの公表値（桐全般の値）。", en:"Years: standard harvest age in local government forestry materials. Weight: air-dry specific gravity, published values for paulownia in general."}},
+    {id:"cmp-quality",
+      q:{ja:"早く育つと、木の質は落ちませんか？", en:"Does fast growth lower the quality?"},
+      a:{ja:"桐はもともと蜂の巣のような細胞の構造を持ち、軽いわりに丈夫な木です。早く育つ品種でも、この構造は変わらないと報告されています。",
+         en:"Paulownia has a honeycomb-like cell structure that makes it strong for its weight. Reports say this structure stays the same in fast-growing varieties."},
+      more:[
+        {id:"cmp-second",
+          q:{ja:"2回目以降の木はどうですか？", en:"What about later harvests?"},
+          a:{ja:"海外の資料では、最初に植えた木より品質が少し落ちるとされています。それでも家具・建築・工芸には使える水準とされています。",
+             en:"Overseas sources say quality drops slightly from the first planted tree, but remains usable for furniture, construction and crafts."}}
+      ]}
+  ]
+},
+{
+  id:"env", icon:"環",
+  title:{ja:"環境とCO₂", en:"Environment and CO₂"},
+  items:[
+    {id:"co2",
+      q:{ja:"CO₂はどのくらい吸収しますか？", en:"How much CO₂ does it absorb?"},
+      a:{ja:"日本で実際に測った早生桐の数字を、参考としてお伝えします。1本が1年に吸うCO₂は約42kgです。1ヘクタールに約1,100本植えたとして計算すると、1年に約46トンです。",
+         en:"As a reference, here are figures actually measured on fast-growing paulownia in Japan. One tree absorbs about 42 kg of CO₂ a year. With about 1,100 trees per hectare, that comes to about 46 tonnes a year."},
+      table:{
+        head:{ja:["1年あたり","早生桐（参考）","スギ"], en:["Per year","Paulownia (reference)","Cedar"]},
+        rows:[
+          {ja:["1本","約42kg","約8.8kg"], en:["One tree","About 42 kg","About 8.8 kg"]},
+          {ja:["1ヘクタール","約46トン","約8.8トン"], en:["One hectare","About 46 t","About 8.8 t"]}
+        ]},
+      note:{ja:"特定の土地・樹齢で測った参考値で、当社の木で測った数字ではありません。土地や育て方で変わり、実際の量は植えて測るまで分かりません。お約束する数字ではありません。スギは林野庁の公表値（36〜40年生、1本は1ヘクタール1,000本として計算）。", en:"Reference values measured at a specific site and age, not on our own trees. Amounts vary by site and care, and are only known once trees are planted and measured. These are not promised figures. Cedar: Forestry Agency of Japan (36 to 40 years old; per-tree value assumes 1,000 trees per hectare)."},
+      more:[
+        {id:"co2-how",
+          q:{ja:"どうやって測った数字ですか？", en:"How was this measured?"},
+          a:{ja:"大学との共同研究で、福島県の3か所の植林地で木の高さと幹の太さを年2回測り、実際に木を伐って重さを量って出した数字です。樹齢7.5年の木1本が吸ったCO₂は合計約319kg、1年あたりにすると約42kgです。この数字は国土交通省の資料にも載っています。",
+             en:"In a joint study with a university, tree height and trunk size were measured twice a year at three plantation sites in Fukushima, and trees were actually felled and weighed. A 7.5-year-old tree had absorbed about 319 kg of CO₂ in total, or about 42 kg a year. The figure also appears in a document of the Ministry of Land, Infrastructure, Transport and Tourism."}},
+        {id:"co2-why",
+          q:{ja:"木がCO₂を吸うとはどういうことですか？", en:"What does it mean for a tree to absorb CO₂?"},
+          a:{ja:"木は光合成で空気中のCO₂から炭素を取り出し、幹や枝、根にして体に残します。木の体は、もともと空気だった炭素でできています。だから木の重さを量ると、吸ったCO₂の量が分かります。",
+             en:"Through photosynthesis a tree takes carbon from CO₂ in the air and builds it into its trunk, branches and roots. The tree's body is made of carbon that was once in the air. That is why weighing a tree shows how much CO₂ it absorbed."}},
+        {id:"co2-cedar",
+          q:{ja:"スギの何倍ですか？", en:"How many times more than cedar?"},
+          a:{ja:"同じ「1ヘクタール・1年」で並べると、約5〜6倍です。ただ、木の年齢も測り方も同じではないので、おおよその目安としてお考えください。",
+             en:"Per hectare per year, it is about five to six times. However, tree age and measuring methods differ, so please treat this as a rough guide."}},
+        {id:"co2-big",
+          q:{ja:"もっと大きな数字を見たことがあります", en:"I have seen much bigger numbers."},
+          a:{ja:"大きな数字の多くは、条件が全部そろった時の計算上の上限です。ほかに、何年分もの合計が1年分として広まった例もあります。ここでは、日本で実際に測った数字だけをお伝えしています。",
+             en:"Most big numbers are calculated upper limits under ideal conditions. In other cases, a total built up over many years spread as a one-year figure. Here we share only figures actually measured in Japan."}}
+      ]},
+    {id:"env-soil",
+      q:{ja:"土や水にはどんな働きがありますか？", en:"What does it do for soil and water?"},
+      a:{ja:"根は地下4.5m以上まで伸びるとされ、硬い土をほぐして水がしみ込みやすくします。根が土を押さえるので、雨で土が流れるのも防ぎます。",
+         en:"Its roots are said to reach over 4.5 m deep, loosening hard soil so water soaks in. They also hold the soil, helping prevent it from washing away in rain."},
+      note:{ja:"海外の報告を含みます。日本の土地で同じ結果になるとお約束するものではありません。", en:"This includes overseas reports. We do not promise the same results on land in Japan."}},
+    {id:"credit",
+      q:{ja:"カーボンクレジットになりますか？", en:"Can it generate carbon credits?"},
+      a:{ja:"現時点で、クレジットとして認定されたものではありません。お約束できる段階ではないため、詳しくは担当者がご説明します。",
+         en:"At present it has not been certified for carbon credits. We cannot make promises at this stage, so a staff member will explain the details."},
+      more:[
+        {id:"credit-why",
+          q:{ja:"なぜすぐに認定されないのですか？", en:"Why isn't it certified yet?"},
+          a:{ja:"日本の制度（J-クレジット）は、何十年もかけて育てる木を前提に作られています。早生桐は、まだ国の造林の対象の木に入っていません。数年で伐ること、植え直さずに切り株から育つことも、今の制度が考えている形とは違います。木が劣っているのではなく、まず土地ごとに育ち方を測って、記録を積み上げる段階です。",
+             en:"Japan's J-Credit scheme assumes trees grown over decades. Fast-growing paulownia is not yet on the list of trees for national reforestation planning. Harvesting within a few years and regrowing from stumps also differ from what the scheme expects. This is not a weakness of the tree: the next step is measuring growth site by site and building up records."},
+          note:{ja:"2026年8月時点で確認できた内容です。制度は変わることがあります。", en:"As confirmed in August 2026. The scheme may change."}}
+      ]},
+    {id:"pollen",
+      q:{ja:"花粉症対策になりますか？", en:"Does it help with hay fever?"},
+      a:{ja:"国は、花粉の出るスギの人工林を2033年度までに約2割減らす目標を立てています。スギを伐ったあとの土地の使い道の一つとして、桐を考えることができます。",
+         en:"Japan aims to cut cedar plantations that produce pollen by about 20% by fiscal 2033. Paulownia is one option for land after cedar is felled."},
+      note:{ja:"桐を植えること自体が花粉症を減らすとお約束するものではありません。合う木は土地によって変わります。", en:"We do not claim that planting paulownia itself reduces hay fever. The right tree depends on the land."}},
+    {id:"sdgs",
+      q:{ja:"SDGsとの関わりは？", en:"How does it relate to the SDGs?"},
+      a:{ja:"主に、気候変動（目標13）、陸の豊かさ（目標15）、つくる責任つかう責任（目標12）、働きがいと経済成長（目標8）、住み続けられるまちづくり（目標11）、クリーンなエネルギー（目標7）に関わる取り組みと考えています。",
+         en:"We see it as relating mainly to climate action (Goal 13), life on land (Goal 15), responsible production (Goal 12), decent work and economic growth (Goal 8), sustainable cities (Goal 11) and clean energy (Goal 7)."}}
+  ]
+},
+{
+  id:"buy", icon:"苗",
+  title:{ja:"苗・山林のご案内", en:"Seedlings and forests"},
+  items:[
+    {id:"buy-one",
+      q:{ja:"苗は買えますか？", en:"Can I buy seedlings?"},
+      a:{ja:"はい、1本からご購入いただけます。価格は本数と地域に応じてお見積もりします。",
+         en:"Yes, from a single seedling. We quote prices according to quantity and region."},
+      more:[
+        {id:"buy-care",
+          q:{ja:"植樹やお手入れも頼めますか？", en:"Can you plant and maintain them?"},
+          a:{ja:"はい、苗代とは別料金でお引き受けします。",
+             en:"Yes, as a service charged separately from the seedlings."}},
+        {id:"buy-flow",
+          q:{ja:"ご相談の流れは？", en:"How does it work?"},
+          a:{ja:"①本数と場所をお知らせいただく ②土の状態や水はけを確認 ③お見積もり ④苗のお届け・植樹 ⑤お手入れ（ご希望の方）⑥5年目ごろに伐採、そして萌芽更新。",
+             en:"1) Tell us the quantity and site. 2) We check soil and drainage. 3) We send a quote. 4) Delivery and planting. 5) Maintenance if you wish. 6) Harvest around year five, then regrowth."}}
+      ]},
+    {id:"buy-forest",
+      q:{ja:"山ごと購入できますか？", en:"Can I buy a whole forest?"},
+      a:{ja:"はい。木材を大量にお使いの企業さま向けに、植林と手入れを終えた山をお譲りしています。所在地・面積は商談の場でお伝えし、現地のご視察もできます。",
+         en:"Yes. For companies that use a lot of timber, we offer forests already planted and maintained. Location and area are shared in a business meeting, and site visits are possible."}},
+    {id:"buy-invest",
+      q:{ja:"投資として儲かりますか？", en:"Is it a profitable investment?"},
+      a:{ja:"収益や利回りをお約束するものではありません。ご検討の場合は、担当者が内容をご説明します。",
+         en:"We do not promise any return or yield. If you are considering it, a staff member will explain the details."}},
+    {id:"buy-abroad",
+      q:{ja:"海外でも植えられますか？", en:"Can it be planted overseas?"},
+      a:{ja:"海外でのご希望は、担当者が個別にお伺いします。国や地域、ご希望の内容をお知らせください。",
+         en:"A staff member will discuss overseas plans with you individually. Please tell us your country or region and what you have in mind."}}
+  ]
+},
+{
+  id:"company", icon:"社",
+  title:{ja:"会社とお問い合わせ", en:"Company and contact"},
+  items:[
+    {id:"co-clone",
+      q:{ja:"苗はどう作っていますか？", en:"How are the seedlings produced?"},
+      a:{ja:"自社で研究開発した品種を、メリクロン（組織培養）というクローン培養で増やし、培養の棚から育苗ハウスへ移して育てます。一本一本が同じ性質を受け継いだ苗なので、育ちがそろい、手入れや収穫の計画が立てやすくなります。",
+         en:"We propagate our own developed variety by meristem (tissue) culture, a form of clone culture, then move the plants from culture shelves to nursery greenhouses. Each seedling inherits the same characteristics, so growth is even and care and harvests are easier to plan."}},
+    {id:"co-contact",
+      q:{ja:"連絡先は？", en:"How can I contact you?"},
+      a:{ja:"株式会社SANSEI\n〒600-8813 京都府京都市下京区中堂寺南町134番地 KRP2号館 2階201号室\nTEL・FAX：075-748-9188\nMAIL：info@sansei-japan.com",
+         en:"SANSEI Co., Ltd.\nKRP Building 2, 2F Room 201, 134 Chudoji Minamimachi, Shimogyo-ku, Kyoto 600-8813, Japan\nTel/Fax: +81-75-748-9188\nEmail: info@sansei-japan.com"}},
+    {id:"co-unknown",
+      q:{ja:"ここに答えがない時は？", en:"What if the answer is not here?"},
+      a:{ja:"無理にお答えせず、「確認してご連絡します」とお伝えください。ご質問とご連絡先を控えて、本社へお知らせください。",
+         en:"Please do not guess. Say \"We will check and get back to you\", note the question and contact details, and pass them to the head office."}}
+  ]
+}
+];
