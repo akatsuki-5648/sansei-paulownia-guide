@@ -9,7 +9,7 @@
      {type:"table", head:{ja:[…],en:[…]}, rows:[{ja:[…],en:[…]}]}
      {type:"link",  href:"https://…", label:{ja,en}}
      {type:"note",  text:{ja,en}} */
-window.KK_VERSION = "2026-11-02";
+window.KK_VERSION = "2026-11-04";
 /* 画面の決まり文句 */
 window.KK_UI = {
   eyebrow:{ja:"ショールーム Q&A", en:"Showroom Q&A"},
@@ -41,8 +41,8 @@ window.KK_QA = [
   items:[
     {id:"what",
       q:{ja:"どんな木ですか？", en:"What kind of tree is this?"},
-      a:{ja:"成長がとても早い桐です。当社が研究開発した品種を、クローン培養で増やしています。植えて4〜5年で大人の木になり、伐ったあとも切り株からまた育ちます。",
-         en:"It is a very fast-growing paulownia. We propagate our own developed variety by clone culture. It reaches maturity in four to five years, and after harvest it grows back from the stump."},
+      a:{ja:"成長がとても早い桐です。当社が扱う品種を、クローン培養で増やしています。植えて4〜5年で大人の木になり、伐ったあとも切り株からまた育ちます。",
+         en:"It is a very fast-growing paulownia. We propagate the variety we handle by clone culture. It reaches maturity in four to five years, and after harvest it grows back from the stump."},
       more:[
         {id:"what-name",
           q:{ja:"「早生桐（そうせいぎり）」とは？", en:"What does \"Soseigiri\" mean?"},
@@ -52,6 +52,27 @@ window.KK_QA = [
           q:{ja:"桐は日本とどんな関わりがありますか？", en:"How is paulownia connected to Japan?"},
           a:{ja:"桐箪笥や琴、下駄など、暮らしの中で長く使われてきました。昔は「娘が生まれたら桐を植え、嫁入りの時に伐って箪笥を作る」といわれたほど、早く育つ木として知られています。「五七の桐」は日本政府の紋章としても使われています。",
              en:"Paulownia has long been part of daily life in Japan, in chests of drawers, koto harps and geta sandals. People used to say, \"When a daughter is born, plant a paulownia, and make a chest from it when she marries.\" The \"go-shichi no kiri\" crest is also used as an emblem of the Government of Japan."}}
+      ]},
+    {id:"diff",
+      q:{ja:"普通の桐と、何が違いますか？", en:"How is it different from ordinary paulownia?"},
+      a:{ja:"いちばんの違いは、大人の木になるまでの早さです。普通の桐が成木になるまで15〜20年ほどとされるのに対し、京都皇帝早生桐は4〜5年が目安です。木としての性質（軽い、湿気を吸ったり放したりする、虫が寄りにくい）は、桐の仲間のものです。",
+         en:"The main difference is how fast it matures. Ordinary paulownia is said to take about 15 to 20 years to become a mature tree; Kyoto Emperor Paulownia is about four to five years. Its qualities as timber (light, takes in and releases moisture, resists insects) are those of paulownia in general."},
+      note:{ja:"普通の桐の年数は一般的な目安です。当社の木で実測した最長の記録は3年で、5年の数字は海外などの報告と計算を含みます（「5年でどのくらいになりますか？」の答えをご覧ください）。", en:"The ordinary-paulownia years are a general guide. The longest measured record for our own trees is three years; the five-year figure includes overseas reports and calculation (see the answer to \"How big will it be at five years?\")."},
+      more:[
+        {id:"diff-early",
+          q:{ja:"普通の桐にも、早生タイプがあるのですか？", en:"Does ordinary paulownia also have fast-growing types?"},
+          a:{ja:"はい。桐の中にも、成長の早いタイプと遅いタイプがあります。成木までの目安は、早いタイプで約15年、標準〜遅いタイプで約20年です。京都皇帝早生桐は、それよりさらに早い、4〜5年を目安にしています。",
+             en:"Yes. Paulownia has faster and slower types. The guide to maturity is about 15 years for the faster type and about 20 years for standard to slow types. Kyoto Emperor Paulownia aims at four to five years, faster still."},
+          note:{ja:"年数は目安で、土地や育て方で変わります。", en:"Years are a guide and vary with site and care."}},
+        {id:"diff-strength",
+          q:{ja:"強さや丈夫さは、普通の桐と違いますか？", en:"Is it different in strength from ordinary paulownia?"},
+          a:{ja:"桐は蜂の巣のような細胞の構造を持ち、軽いわりに丈夫な木です。早く育つ品種でも、この構造は変わらないと報告されています。ただ、当社の木と普通の桐の強さを並べて測った数字は、この案内にはありません。",
+             en:"Paulownia has a honeycomb-like cell structure that makes it strong for its weight. Reports say this structure stays the same in fast-growing varieties. However, this guide has no figures from measuring our trees and ordinary paulownia side by side."}},
+        {id:"diff-origin",
+          q:{ja:"この品種はどうやって生まれたのですか？ 開発した方は？", en:"How did this variety originate, and who developed it?"},
+          a:{ja:"品種の成り立ち（開発の経緯と開発者）は、本社の記録で管理しています。正確にお答えするため、確認してご連絡します。",
+             en:"The origin of the variety (how and by whom it was developed) is kept in the head office's records. To answer accurately, we will check and get back to you."},
+          note:{ja:"スタッフの方へ：経緯を聞かれても、推測でお答えしないでください。「経緯は記録を確認して、正確にお伝えします」とお伝えし、ご質問とご連絡先を本社へ。商標登録は済み、種苗登録は申請中です（2026年8月時点・現在の状況は本社で確認）。", en:"For staff: if asked, please do not guess about the origin. Say \"We will check our records and tell you accurately\", and pass the question and contact details to the head office. The trademark is registered and the plant variety registration is pending (as of August 2026; check the current status with the head office)."}}
       ]},
     {id:"why",
       q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
@@ -73,14 +94,24 @@ window.KK_QA = [
   items:[
     {id:"speed",
       q:{ja:"どのくらいの早さで育ちますか？", en:"How fast does it grow?"},
-      a:{ja:"徳島県吉野川市の圃場では、植えて3年で高さ8m、幹回り72cmを実測しました（開発者の圃場）。",
-         en:"In a field in Yoshinogawa, Tokushima, we measured 8 m in height and a 72 cm trunk girth three years after planting (the developer's field)."},
+      a:{ja:"徳島県吉野川市の圃場では、植えて3年で高さ8m、幹回り72cmを実測しました。",
+         en:"In a field in Yoshinogawa, Tokushima, we measured 8 m in height and a 72 cm trunk girth three years after planting."},
       more:[
         {id:"speed-5",
           q:{ja:"5年でどのくらいになりますか？", en:"How big will it be at five years?"},
           a:{ja:"早生桐は一般に、5〜6年で高さ15〜17m、幹回り約1m（直径約32cm）に育つとされています。徳島の圃場の3年間のペースが続いた場合の計算では、5年で幹回り約120cmです。こちらは実測ではなく計算です。",
              en:"Fast-growing paulownia is generally said to reach 15 to 17 m in height and about 1 m in girth (about 32 cm in diameter) in five to six years. If the three-year pace of the Tokushima field continues, the girth at five years would be about 120 cm. This is a calculation, not a measurement."},
           note:{ja:"当社の木の記録は、いちばん古いもので3年です。", en:"Our oldest growth record for our own trees is three years."}},
+        {id:"size-max",
+          q:{ja:"最大で、どのくらいの高さ・太さになりますか？", en:"How tall and thick can it get at most?"},
+          a:{ja:"当社の木で実測した中でいちばん大きいのは、徳島県吉野川市の3年生で、高さ8m・幹回り72cm（直径約23cm）です。それより長く育てた当社の木の記録は、まだありません。一般には、5〜6年で高さ15〜17m・幹回り約1mとされます。海外の長期の研究では、ネパールで12年で幹の太さ30cm、20年で平均37cm（太いもので55cm）と報告されています。",
+             en:"The largest measured on our own trees is a three-year-old in Yoshinogawa, Tokushima: 8 m tall with a 72 cm girth (about 23 cm in diameter). We have no records of our trees grown longer. Generally, 15 to 17 m in height and about 1 m girth at five to six years is cited. In a long-term overseas study in Nepal, trunk thickness was reported as 30 cm at 12 years and 37 cm on average at 20 years (up to 55 cm)."},
+          note:{ja:"海外の数字は、別の系統・別の土地のものです。「最大でこの大きさになる」とお約束できる数字はありません。", en:"Overseas figures are from other lines and other land. We cannot promise any maximum size."}},
+        {id:"size-fell",
+          q:{ja:"伐る時の大きさは、高さ15mが基準ですか？", en:"Is a height of 15 m the standard size for felling?"},
+          a:{ja:"「15mで伐る」という決まりは、当社の記録にはありません。伐る時期は、使い道に必要な太さや長さと、収穫を回す周期で決める目安です。ご案内の流れでは、植えて5年目ごろに最初の伐採をし、その後は5〜8年ごとに伐ります。参考に、桐の原木市場の取引例（令和5年7月）に、長さ3.80m・末口62cm・材積1.461㎥の原木があります。",
+             en:"There is no \"fell at 15 m\" rule in our records. The time to fell is a guide set by the thickness and length needed for the use and by the harvest cycle. In our standard flow, the first harvest is around year five, then every five to eight years. For reference, a paulownia log market example (July 2023) includes a log 3.80 m long, 62 cm at the small end, 1.461 m³ in volume."},
+          note:{ja:"原木市場の例は桐全般のもので、当社の木の取引ではありません。", en:"The market example is for paulownia in general, not a sale of our trees."}},
         {id:"speed-other",
           q:{ja:"ほかの場所の記録はありますか？", en:"Are there records from other places?"},
           a:{ja:"大分県豊後大野市：2025年5月に植え、3か月半で全ての木が1.7m超、1年で高さ5〜6m。\n京都府：植えて2年で高さ7m、幹回り46cm。\n北海道札幌市：2025年夏に植え、2026年6月時点で高さ2m。",
@@ -93,6 +124,11 @@ window.KK_QA = [
          en:"There is no need to replant. New shoots rise from the stump and grow again. This is called coppicing. The same roots keep growing, with a harvest every five to eight years."},
       note:{ja:"当社の木で伐採を重ねた実績は、これから積み上げていく段階です。", en:"We are still building our own record of repeated harvests."},
       more:[
+        {id:"regrow-why",
+          q:{ja:"なぜ、年数が来たら伐るのですか？ 長く育てた方が良くないのですか？", en:"Why fell after a set number of years? Wouldn't longer growth be better?"},
+          a:{ja:"桐は伐ったあとも切り株から育つので、植え直さずに何度も収穫できます。そのため、大きくなるまで待つより、決めた周期（5〜8年ごと）で伐って回す考え方をとります。長く育てるほど得になるとは限りません。海外（ネパール）の研究では、幹の太さが12年で30cmになり、それ以上育てても採算は上がらないと報告されています。スギ・ヒノキにも、地域ごとに「標準伐期齢」という標準的な伐採の年齢が決められています。",
+             en:"Paulownia regrows from the stump, so it can be harvested many times without replanting. So rather than waiting until it is very large, we think in terms of a fixed cycle (every five to eight years). Longer is not always better: in an overseas study in Nepal, trunk thickness reached 30 cm at 12 years and growing longer did not improve profitability. Cedar and cypress also have a \"standard felling age\" set by region."},
+          note:{ja:"長く育てると木に良くない、という記録は確認できていません。伐る時期は、使い道に必要な太さと、収穫を回す周期で決める目安です。", en:"We have not confirmed any record that longer growth harms the tree. The felling time is a guide based on the size needed and the harvest cycle."}},
         {id:"regrow-times",
           q:{ja:"何回くらい収穫できますか？", en:"How many times can it be harvested?"},
           a:{ja:"根の寿命は70〜100年とされ、その間に4〜9回の伐採をくり返せるという報告があります。",
@@ -304,8 +340,8 @@ window.KK_QA = [
   items:[
     {id:"co-clone",
       q:{ja:"苗はどう作っていますか？", en:"How are the seedlings produced?"},
-      a:{ja:"自社で研究開発した品種を、メリクロン（組織培養）というクローン培養で増やし、培養の棚から育苗ハウスへ移して育てます。一本一本が同じ性質を受け継いだ苗なので、育ちがそろい、手入れや収穫の計画が立てやすくなります。",
-         en:"We propagate our own developed variety by meristem (tissue) culture, a form of clone culture, then move the plants from culture shelves to nursery greenhouses. Each seedling inherits the same characteristics, so growth is even and care and harvests are easier to plan."}},
+      a:{ja:"当社が扱う品種を、メリクロン（組織培養）というクローン培養で増やし、培養の棚から育苗ハウスへ移して育てます。一本一本が同じ性質を受け継いだ苗なので、育ちがそろい、手入れや収穫の計画が立てやすくなります。",
+         en:"We propagate the variety we handle by meristem (tissue) culture, a form of clone culture, then move the plants from culture shelves to nursery greenhouses. Each seedling inherits the same characteristics, so growth is even and care and harvests are easier to plan."}},
     {id:"co-contact",
       q:{ja:"連絡先は？", en:"How can I contact you?"},
       a:{ja:"株式会社SANSEI\n〒600-8813 京都府京都市下京区中堂寺南町134番地 KRP2号館 2階201号室\nTEL・FAX：075-748-9188\nMAIL：info@sansei-japan.com",
