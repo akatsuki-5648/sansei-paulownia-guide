@@ -113,7 +113,7 @@
   .kkqa-bar{padding-left:max(var(--kkqa-gut),calc(50vw - var(--kkqa-width-wide)/2));padding-right:max(var(--kkqa-gut),calc(50vw - var(--kkqa-width-wide)/2))}
   .kkqa-layout{display:grid;grid-template-columns:240px minmax(0,1fr);gap:40px;max-width:var(--kkqa-width-wide)}
   .kkqa-nav{display:block;position:sticky;top:calc(var(--kkqa-bar-h) + 12px);align-self:start;padding-top:24px}
-  .kkqa-nav__btn{display:block;width:100%;padding:9px 10px;border:0;border-left:2px solid var(--kkqa-line);background:transparent;color:inherit;font:inherit;font-size:15px;line-height:1.5;text-align:left;cursor:pointer}
+  .kkqa-nav__btn{display:block;width:100%;min-height:var(--kkqa-tap);padding:9px 10px;border:0;border-left:2px solid var(--kkqa-line);background:transparent;color:inherit;font:inherit;font-size:15px;line-height:1.5;text-align:left;cursor:pointer}
   .kkqa-nav__btn:hover{border-left-color:var(--kkqa-forest);background:var(--kkqa-cream)}
 }
 @media (prefers-reduced-motion:reduce){.kkqa-cat__head::after,.kkqa-item__head::after{transition:none}}

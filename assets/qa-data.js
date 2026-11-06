@@ -41,8 +41,8 @@ window.KK_QA = [
   items:[
     {id:"what",
       q:{ja:"どんな木ですか？", en:"What kind of tree is this?"},
-      a:{ja:"成長がとても早い桐です。当社が扱う品種を、クローン培養で増やしています。植えて4〜5年で大人の木になり、伐ったあとも切り株からまた育ちます。",
-         en:"It is a very fast-growing paulownia. We propagate the variety we handle by clone culture. It reaches maturity in four to five years, and after harvest it grows back from the stump."},
+      a:{ja:"成長がとても早い桐です。当社が扱う品種を、クローン培養で増やしています。本格的に製品にできるのは植えて3年目ごろから、成木になるのは5〜6年が目安です。伐ったあとも切り株からまた育ちます。",
+         en:"It is a very fast-growing paulownia. We propagate the variety we handle by clone culture. It can be used for products in earnest from about the third year, and becomes a mature tree in about five to six years. After harvest it grows back from the stump."},
       more:[
         {id:"what-name",
           q:{ja:"「早生桐（そうせいぎり）」とは？", en:"What does \"Soseigiri\" mean?"},
@@ -55,14 +55,14 @@ window.KK_QA = [
       ]},
     {id:"diff",
       q:{ja:"普通の桐と、何が違いますか？", en:"How is it different from ordinary paulownia?"},
-      a:{ja:"いちばんの違いは、大人の木になるまでの早さです。普通の桐が成木になるまで15〜20年ほどとされるのに対し、京都皇帝早生桐は4〜5年が目安です。木としての性質（軽い、湿気を吸ったり放したりする、虫が寄りにくい）は、桐の仲間のものです。",
-         en:"The main difference is how fast it matures. Ordinary paulownia is said to take about 15 to 20 years to become a mature tree; Kyoto Emperor Paulownia is about four to five years. Its qualities as timber (light, takes in and releases moisture, resists insects) are those of paulownia in general."},
-      note:{ja:"普通の桐の年数は一般的な目安です。当社の木で実測した最長の記録は3年で、5年の数字は海外などの報告と計算を含みます（「5年でどのくらいになりますか？」の答えをご覧ください）。", en:"The ordinary-paulownia years are a general guide. The longest measured record for our own trees is three years; the five-year figure includes overseas reports and calculation (see the answer to \"How big will it be at five years?\")."},
+      a:{ja:"いちばんの違いは、成木になるまでの早さです。普通の桐が成木になるまで15〜20年ほどとされるのに対し、京都皇帝早生桐は5〜6年が目安です（製品には3年目ごろから使えます）。木としての性質（軽い、湿気を吸ったり放したりする、虫が寄りにくい）は、桐の仲間のものです。",
+         en:"The main difference is how fast it matures. Ordinary paulownia is said to take about 15 to 20 years to become a mature tree; Kyoto Emperor Paulownia is about five to six years (usable for products from about the third year). Its qualities as timber (light, takes in and releases moisture, resists insects) are those of paulownia in general."},
+      note:{ja:"普通の桐の年数は一般的な目安です。当社の木で実測した最長の記録は3年です。成木の年数は、同じ系統の早生桐の記録を含む目安です（「5年でどのくらいになりますか？」の答えをご覧ください）。", en:"The ordinary-paulownia years are a general guide. The longest measured record for our own trees is three years; the years to maturity are a guide that includes records of fast-growing paulownia of the same lineage (see the answer to \"How big will it be at five years?\")."},
       more:[
         {id:"diff-early",
           q:{ja:"普通の桐にも、早生タイプがあるのですか？", en:"Does ordinary paulownia also have fast-growing types?"},
-          a:{ja:"はい。桐の中にも、成長の早いタイプと遅いタイプがあります。成木までの目安は、早いタイプで約15年、標準〜遅いタイプで約20年です。京都皇帝早生桐は、それよりさらに早い、4〜5年を目安にしています。",
-             en:"Yes. Paulownia has faster and slower types. The guide to maturity is about 15 years for the faster type and about 20 years for standard to slow types. Kyoto Emperor Paulownia aims at four to five years, faster still."},
+          a:{ja:"はい。桐の中にも、成長の早いタイプと遅いタイプがあります。成木までの目安は、早いタイプで約15年、標準〜遅いタイプで約20年です。京都皇帝早生桐は、それよりさらに早い、5〜6年を目安にしています（製品には3年目ごろから）。",
+             en:"Yes. Paulownia has faster and slower types. The guide to maturity is about 15 years for the faster type and about 20 years for standard to slow types. Kyoto Emperor Paulownia aims at five to six years, faster still (usable for products from about the third year)."},
           note:{ja:"年数は目安で、土地や育て方で変わります。", en:"Years are a guide and vary with site and care."}},
         {id:"diff-strength",
           q:{ja:"強さや丈夫さは、普通の桐と違いますか？", en:"Is it different in strength from ordinary paulownia?"},
@@ -81,8 +81,8 @@ window.KK_QA = [
       ]},
     {id:"why",
       q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
-      a:{ja:"スギは30〜40年、ヒノキは40〜50年かかります。早生桐は4〜5年で大人の木になるので、植えた人の代で結果を見られます。伐ったあとも植え直さずに育つので、同じ土地で何度も収穫できます。",
-         en:"Japanese cedar takes 30 to 40 years and cypress 40 to 50. Fast-growing paulownia matures in four to five years, so the person who plants it can see the result. It grows back without replanting, so the same land can be harvested again and again."},
+      a:{ja:"スギは30〜40年、ヒノキは40〜50年かかります。早生桐は3年目ごろから製品に使え、5〜6年で成木になるので、植えた人の代で結果を見られます。伐ったあとも植え直さずに育つので、同じ土地で何度も収穫できます。",
+         en:"Japanese cedar takes 30 to 40 years and cypress 40 to 50. Fast-growing paulownia is usable for products from about the third year and matures in five to six years, so the person who plants it can see the result. It grows back without replanting, so the same land can be harvested again and again."},
       note:{ja:"スギ・ヒノキの年数：地方自治体の林業資料による、標準的な伐採の時期。", en:"Cedar and cypress years: standard harvest age in local government forestry materials."},
       more:[
         {id:"demand",
@@ -99,29 +99,34 @@ window.KK_QA = [
   items:[
     {id:"speed",
       q:{ja:"どのくらいの早さで育ちますか？", en:"How fast does it grow?"},
-      a:{ja:"徳島県吉野川市の圃場では、植えて3年で高さ8m、幹回り72cmを実測しました。",
-         en:"In a field in Yoshinogawa, Tokushima, we measured 8 m in height and a 72 cm trunk girth three years after planting."},
+      a:{ja:"徳島県吉野川市の圃場では、植えて3年で高さ8m、幹回り72cm（直径約23cm）を実測しました。",
+         en:"In a field in Yoshinogawa, Tokushima, we measured 8 m in height and a 72 cm trunk girth (about 23 cm in diameter) three years after planting."},
       more:[
         {id:"speed-5",
           q:{ja:"5年でどのくらいになりますか？", en:"How big will it be at five years?"},
-          a:{ja:"早生桐は一般に、5〜6年で高さ15〜17m、幹回り約1m（直径約32cm）に育つとされています。徳島の圃場の3年間のペースが続いた場合の計算では、5年で幹回り約120cmです。こちらは実測ではなく計算です。",
-             en:"Fast-growing paulownia is generally said to reach 15 to 17 m in height and about 1 m in girth (about 32 cm in diameter) in five to six years. If the three-year pace of the Tokushima field continues, the girth at five years would be about 120 cm. This is a calculation, not a measurement."},
-          note:{ja:"当社の木の記録は、いちばん古いもので3年です。", en:"Our oldest growth record for our own trees is three years."}},
+          a:{ja:"同じ系統の早生桐では、植えて6〜7年で高さ15mに育ったことが測られています。当社の木の記録は3年が最長で、5年の大きさはまだ測っていません。徳島の圃場の3年間のペースが続いた場合の計算では、5年で幹回り約120cm（直径約38cm）です。こちらは実測ではなく計算です。",
+             en:"In fast-growing paulownia of the same lineage, trees were measured reaching 15 m in height six to seven years after planting. Our own longest record is three years, and we have not yet measured a five-year tree. If the three-year pace of the Tokushima field continues, the girth at five years would be about 120 cm (about 38 cm in diameter). This is a calculation, not a measurement."},
+          note:{ja:"同じ系統の記録は、他社の植林地（福島県）で行われた研究によるものです。当社の木の記録は、いちばん古いもので3年です。当社の幹回りは、測った高さを記録していません（今後は地上1.3mで測ります）。", en:"The same-lineage record comes from a study on another company's plantations (Fukushima). Our oldest record for our own trees is three years. For our girth figures, the measuring height was not recorded (we will measure at 1.3 m above ground from now on)."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】学会の要旨（成蹊大学・2021年）：福島県3か所・年2回・各20本を測定し伐って計量、6・7年で高さ15m", en:"[Staff only] Conference abstract (Seikei Univ., 2021): 3 sites in Fukushima, measured twice a year, 20 trees each, felled and weighed; 15 m at 6–7 years"}, href:"https://pub.confit.atlas.jp/ja/event/mmij2021a/presentation/3K0408-14-02"},
+            {type:"link", label:{ja:"【スタッフ専用】ナリコー早生桐（公式）：5〜6年で15〜17mは会社の説明／実測は2年3ヶ月で平均5.9m／萌芽は1年目で6m超えることがある", en:"[Staff only] Narikoh (official): 15–17 m in 5–6 years is the company's claim; measured 5.9 m average at 2 yrs 3 mos; coppice shoots may exceed 6 m in year 1"}, href:"https://www.narikoh.co.jp/souseigiri"}
+          ]},
         {id:"size-max",
           q:{ja:"最大で、どのくらいの高さ・太さになりますか？", en:"How tall and thick can it get at most?"},
-          a:{ja:"当社の木で実測した中でいちばん大きいのは、徳島県吉野川市の3年生で、高さ8m・幹回り72cm（直径約23cm）です。それより長く育てた当社の木の記録は、まだありません。一般には、5〜6年で高さ15〜17m・幹回り約1mとされます。海外の長期の研究では、ネパールで12年で幹の太さ30cm、20年で平均37cm（太いもので55cm）と報告されています。",
-             en:"The largest measured on our own trees is a three-year-old in Yoshinogawa, Tokushima: 8 m tall with a 72 cm girth (about 23 cm in diameter). We have no records of our trees grown longer. Generally, 15 to 17 m in height and about 1 m girth at five to six years is cited. In a long-term overseas study in Nepal, trunk thickness was reported as 30 cm at 12 years and 37 cm on average at 20 years (up to 55 cm)."},
+          a:{ja:"当社の木で実測した中でいちばん大きいのは、徳島県吉野川市の3年生で、高さ8m・幹回り72cm（直径約23cm）です。それより長く育てた当社の木の記録は、まだありません。同じ系統の早生桐では、6〜7年で高さ15mに育った記録があります。海外の長期の研究では、ネパールで12年で幹の直径30cm、20年で平均37cm（太いもので55cm）と報告されています。",
+             en:"The largest measured on our own trees is a three-year-old in Yoshinogawa, Tokushima: 8 m tall with a 72 cm girth (about 23 cm in diameter). We have no records of our trees grown longer. In fast-growing paulownia of the same lineage, there is a record of 15 m in height at six to seven years. In a long-term overseas study in Nepal, trunk diameter was reported as 30 cm at 12 years and 37 cm on average at 20 years (up to 55 cm)."},
           note:{ja:"海外の数字は、別の系統・別の土地のものです。「最大でこの大きさになる」とお約束できる数字はありません。", en:"Overseas figures are from other lines and other land. We cannot promise any maximum size."}},
         {id:"size-fell",
           q:{ja:"伐る時の大きさは、高さ15mが基準ですか？", en:"Is a height of 15 m the standard size for felling?"},
-          a:{ja:"「15mで伐る」という決まりは、当社の記録にはありません。伐る時期は、使い道に必要な太さや長さと、収穫を回す周期で決める目安です。ご案内の流れでは、植えて5年目ごろに最初の伐採をし、その後は5〜8年ごとに伐ります。参考に、桐の原木市場の取引例（令和5年7月）に、長さ3.80m・末口62cm・材積1.461㎥の原木があります。",
-             en:"There is no \"fell at 15 m\" rule in our records. The time to fell is a guide set by the thickness and length needed for the use and by the harvest cycle. In our standard flow, the first harvest is around year five, then every five to eight years. For reference, a paulownia log market example (July 2023) includes a log 3.80 m long, 62 cm at the small end, 1.461 m³ in volume."},
+          a:{ja:"「15mで伐る」という決まりは、当社の記録にはありません。伐る時期は、使い道に必要な太さや長さと、収穫を回す周期で決める目安です。ご案内の流れでは、成木になる5〜6年目ごろに最初の伐採をし、その後は5〜8年ごとに伐ります。参考に、桐の原木市場の取引例（令和5年7月）に、長さ3.80m・末口（細い方の端の直径）62cm・材積1.461㎥の原木があります。",
+             en:"There is no \"fell at 15 m\" rule in our records. The time to fell is a guide set by the thickness and length needed for the use and by the harvest cycle. In our standard flow, the first harvest is around year five or six, when the tree matures, then every five to eight years. For reference, a paulownia log market example (July 2023) includes a log 3.80 m long, 62 cm in diameter at the small end, 1.461 m³ in volume."},
           note:{ja:"原木市場の例は桐全般のもので、当社の木の取引ではありません。", en:"The market example is for paulownia in general, not a sale of our trees."}},
         {id:"speed-other",
           q:{ja:"ほかの場所の記録はありますか？", en:"Are there records from other places?"},
-          a:{ja:"大分県豊後大野市：2025年5月に植え、3か月半で全ての木が1.7m超、1年で高さ5〜6m。\n京都府：植えて2年で高さ7m、幹回り46cm。\n北海道札幌市：2025年夏に植え、2026年6月時点で高さ2m。",
-             en:"Bungo-Ono, Oita: planted May 2025; all trees over 1.7 m in three and a half months, and 5 to 6 m in one year.\nKyoto Prefecture: 7 m tall with a 46 cm girth two years after planting.\nSapporo, Hokkaido: planted summer 2025; 2 m tall as of June 2026."},
-          note:{ja:"育ち方は、土づくりと気候で変わります。", en:"Growth varies with soil preparation and climate."}}
+          a:{ja:"大分県豊後大野市：2025年5月に植え、3か月半で全ての木が1.7m超、1年で高さ5〜6m。\n京都府：植えて2年で高さ7m、幹回り46cm（直径約15cm）。\n北海道札幌市：当社の苗をご購入いただいた方に伺ったところ、2025年夏に植え、2026年6月時点で高さ2mとのことです。\n滋賀県（失敗例）：植えて2年で高さ4m。",
+             en:"Bungo-Ono, Oita: planted May 2025; all trees over 1.7 m in three and a half months, and 5 to 6 m in one year.\nKyoto Prefecture: 7 m tall with a 46 cm girth (about 15 cm in diameter) two years after planting.\nSapporo, Hokkaido: according to a customer who bought our seedlings, planted summer 2025 and 2 m tall as of June 2026.\nShiga Prefecture (a failed case): 4 m tall two years after planting."},
+          note:{ja:"育ち方は、土づくりと気候で変わります。スタッフの方へ：うまく育った例・失敗例は、写真付きで後日載せます。滋賀の例の写真：（空欄）／失敗の原因：（空欄）。聞かれたら「正確な情報が降りてきておりませんので、後日確認してお知らせ致します」とお伝えください。", en:"Growth varies with soil preparation and climate. For staff: successful and failed cases will be added later with photos. Shiga case photo: (blank) / cause of failure: (blank). If asked, say: \"We have not yet received accurate information, so we will confirm and let you know at a later date.\""}}
       ]},
     {id:"regrow",
       q:{ja:"伐ったあとはどうなりますか？", en:"What happens after harvesting?"},
@@ -131,22 +136,41 @@ window.KK_QA = [
       more:[
         {id:"regrow-why",
           q:{ja:"なぜ、年数が来たら伐るのですか？ 長く育てた方が良くないのですか？", en:"Why fell after a set number of years? Wouldn't longer growth be better?"},
-          a:{ja:"桐は伐ったあとも切り株から育つので、植え直さずに何度も収穫できます。そのため、大きくなるまで待つより、決めた周期（5〜8年ごと）で伐って回す考え方をとります。長く育てるほど得になるとは限りません。海外（ネパール）の研究では、幹の太さが12年で30cmになり、それ以上育てても採算は上がらないと報告されています。スギ・ヒノキにも、地域ごとに「標準伐期齢」という標準的な伐採の年齢が決められています。",
-             en:"Paulownia regrows from the stump, so it can be harvested many times without replanting. So rather than waiting until it is very large, we think in terms of a fixed cycle (every five to eight years). Longer is not always better: in an overseas study in Nepal, trunk thickness reached 30 cm at 12 years and growing longer did not improve profitability. Cedar and cypress also have a \"standard felling age\" set by region."},
+          a:{ja:"桐は伐ったあとも切り株から育つので、植え直さずに何度も収穫できます。そのため、大きくなるまで待つより、決めた周期（5〜8年ごと）で伐って回す考え方をとります。長く育てるほど得になるとは限りません。海外（ネパール）の研究では、幹の直径が12年で30cmになり、それ以上育てても採算は上がらないと報告されています。スギ・ヒノキにも、地域ごとに「標準伐期齢」という標準的な伐採の年齢が決められています。",
+             en:"Paulownia regrows from the stump, so it can be harvested many times without replanting. So rather than waiting until it is very large, we think in terms of a fixed cycle (every five to eight years). Longer is not always better: in an overseas study in Nepal, trunk diameter reached 30 cm at 12 years and growing longer did not improve profitability. Cedar and cypress also have a \"standard felling age\" set by region."},
           note:{ja:"長く育てると木に良くない、という記録は確認できていません。伐る時期は、使い道に必要な太さと、収穫を回す周期で決める目安です。", en:"We have not confirmed any record that longer growth harms the tree. The felling time is a guide based on the size needed and the harvest cycle."}},
         {id:"regrow-vigor",
           q:{ja:"一般的な桐の萌芽更新と比べて、何か良いところはありますか？", en:"Does its regrowth from the stump have any advantage over ordinary paulownia?"},
-          a:{ja:"桐は切り株から新しい芽が出る力がとても強い木で、京都皇帝早生桐もこの力を活かして育てます。伐採後は植え直さず、すでに張っている根から栄養を受け取って育つため、種から育てるよりも早い段階から成長が始まります。新しい芽は数週間ほどで小さな苗木の大きさになります。根が最初から張っているので、成長も早まる見込みで、早生桐としての回転率も上がると想定しています。植え直しの手間と苗代のコストはかからなくなり、2回目以降の手間とコストはぐんと減ります（芽かきなどの手入れは要ります）。",
-             en:"Paulownia has a very strong ability to sprout from the stump, and Kyoto Emperor Paulownia makes use of it. After harvesting there is no replanting: new shoots draw nutrients from roots that are already established, so growth starts earlier than when growing from seed. New shoots reach the size of a small sapling in a few weeks. Because the roots are already in place, we expect growth to be faster, and we anticipate a higher turnover as a fast-growing paulownia. The labour of replanting and the cost of seedlings disappear, and labour and cost from the second cycle drop sharply (care such as thinning shoots is still needed)."},
-          note:{ja:"「成長も早まる」「回転率が上がる」は当社の見込みと想定で、実測した数字はまだありません。一般の桐との比較は、実測を進めながら確認していきます。材の品質は、手入れによって同等の品質を得られます。", en:"\"Faster growth\" and \"higher turnover\" are our expectation and assumption; we have no measured figures yet. Comparison with ordinary paulownia will be confirmed as we measure. With proper care, equal wood quality can be obtained."}},
+          a:{ja:"桐は切り株から新しい芽が出る力がとても強い木で、京都皇帝早生桐もこの力を活かして育てます。伐採後は植え直さず、すでに張っている根から栄養を受け取って育つため、苗から植え直すよりも早い段階から成長が始まります。同じ系統の早生桐では、萌芽した芽が1年目で6mを超えることがあると報告されています。根が最初から張っているので、成長も早まる見込みで、早生桐としての回転率も上がると想定しています。植え直しの手間と苗代のコストはかからなくなり、2回目以降の手間とコストはぐんと減ります（芽かきなどの手入れは要ります）。",
+             en:"Paulownia has a very strong ability to sprout from the stump, and Kyoto Emperor Paulownia makes use of it. After harvesting there is no replanting: new shoots draw nutrients from roots that are already established, so growth starts earlier than when replanting seedlings. In fast-growing paulownia of the same lineage, shoots from the stump are reported to sometimes exceed 6 m in the first year. Because the roots are already in place, we expect growth to be faster, and we anticipate a higher turnover as a fast-growing paulownia. The labour of replanting and the cost of seedlings disappear, and labour and cost from the second cycle drop sharply (care such as thinning shoots is still needed)."},
+          note:{ja:"「成長も早まる」「回転率が上がる」は当社の見込みと想定で、実測した数字はまだありません。一般の桐との比較は、実測を進めながら確認していきます。材の品質は、そのままだと品質は若干落ちるという報告がございますが、手入れ次第でほぼ同等の品質を保つこともできます。", en:"\"Faster growth\" and \"higher turnover\" are our expectation and assumption; we have no measured figures yet. Comparison with ordinary paulownia will be confirmed as we measure. On wood quality: Left as it is, quality is reported to drop slightly, but with proper care it can be kept almost the same."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】ナリコー早生桐（公式）：5〜6年で15〜17mは会社の説明／実測は2年3ヶ月で平均5.9m／萌芽は1年目で6m超えることがある", en:"[Staff only] Narikoh (official): 15–17 m in 5–6 years is the company's claim; measured 5.9 m average at 2 yrs 3 mos; coppice shoots may exceed 6 m in year 1"}, href:"https://www.narikoh.co.jp/souseigiri"}
+          ]},
         {id:"regrow-times",
           q:{ja:"何回くらい収穫できますか？", en:"How many times can it be harvested?"},
-          a:{ja:"根の寿命は70〜100年とされ、その間に4〜9回の伐採をくり返せるという報告があります。",
-             en:"The roots are said to live 70 to 100 years, and reports say four to nine harvests are possible in that time."}},
+          a:{ja:"同じ根で何回伐れるかは、育てる環境や手入れによりますが、外部の資料の数字の平均では、5〜6回ほどとなっております。根の寿命を70〜100年とする資料もあります。ただ、どの資料にも出典や実際に測った記録が示されていないため、目安としてお考えください。",
+             en:"How many times the same roots can be harvested depends on the growing environment and care, but the average of figures in outside materials is about five to six times. Some materials put root life at 70 to 100 years. However, none of them show a source or measured records, so please treat this as a guide."},
+          note:{ja:"スタッフの方へ：外部の資料の平均値として載せると決めたのは Hikârư（2026-11-06）。平均は、各資料の回数の幅の真ん中をならした値（約5.5回）です。souseikiri.jp の「5〜7回・最大35年間」は出どころが見つかっていません。", en:"For staff: Hikârư decided (6 Nov 2026) to show this as an average of outside data. The average is the mean of the midpoints of each source's range (about 5.5). The source of \"5–7 times over up to 35 years\" on souseikiri.jp has not been found."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】paulownia.pro（スペインの苗木業者）：根の寿命70〜100年・4〜8/9回・出典なし", en:"[Staff only] paulownia.pro (Spanish grower): root life 70–100 yrs, 4–8/9 cycles, no source"}, href:"https://paulownia.pro/en/paulownia/"},
+            {type:"link", label:{ja:"【スタッフ専用】GREEMAP（スペインの業者）：根の寿命70〜100年・4〜8/9回、萌芽は最大6回・出典なし", en:"[Staff only] GREEMAP (Spanish company): root life 70–100 yrs, 4–8/9 cycles, up to 6 sprouts, no source"}, href:"https://greemap.es/en/paulownia-2/paulownia-characteristics-of-wood/"},
+            {type:"link", label:{ja:"【スタッフ専用】Dealin.Green（欧州の炭素プログラム計画書・2025年12月）：30年以上で4〜5回／40年で4回（計画の想定）", en:"[Staff only] Dealin.Green (EU carbon program document, Dec 2025): 4–5 times over 30+ years; 4 times in 40 years (planning assumption)"}, href:"https://proba.earth/hubfs/26908810/Master%20POD%20Dealin.Green%20-%20Paulownia%20in%20Continental%20Europe.pdf?hsLang=en"},
+            {type:"link", label:{ja:"【スタッフ専用】SUMIDA（ジャパロニア）：再発芽4〜5回／FAQでは4〜6回", en:"[Staff only] SUMIDA (Japalonia): regrowth 4–5 times; 4–6 times in FAQ"}, href:"https://sumida-eco.jp/soseikiri/"},
+            {type:"link", label:{ja:"【スタッフ専用】エンザミンパワー横浜：再発芽5〜6回", en:"[Staff only] Enzamin Power Yokohama: regrowth 5–6 times"}, href:"https://enzamin-power.yokohama/?page_id=25347"},
+            {type:"link", label:{ja:"【スタッフ専用】BioEconomy Solutions（米国の業者）：4〜8回", en:"[Staff only] BioEconomy Solutions (US company): 4–8 times"}, href:"https://bioeconomysolutions.com/the-phoenix-tree-paulownias-remarkable-regrowth-after-harvest/"}
+          ]},
         {id:"regrow-care",
           q:{ja:"2回目からの手入れは？", en:"What care is needed after the first harvest?"},
-          a:{ja:"切り株からは芽がいくつも出ます。そのままだと細い幹が何本もでき、曲がって伸びて製品になりません。1本に絞る手入れ（芽かき）をすれば、同等の品質を得られます。",
-             en:"Several shoots rise from the stump. Left alone, they become many thin, crooked trunks that cannot be used as products. Thinning them to one (shoot pruning) gives equal quality."}}
+          a:{ja:"切り株からは芽がいくつも出ます。そのままだと細い幹が何本もでき、曲がって伸びて製品になりません。1本に絞る手入れ（芽かき）が要ります。そのままだと品質は若干落ちるという報告がございますが、手入れ次第でほぼ同等の品質を保つこともできます。",
+             en:"Several shoots rise from the stump. Left alone, they become many thin, crooked trunks that cannot be used as products. They need to be thinned to one (shoot pruning). Left as it is, quality is reported to drop slightly, but with proper care it can be kept almost the same."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】書籍『桐（地域資源を活かす生活工芸双書）』（農文協・2024）69ページ「台切り法」：植えた翌春に地際で伐り、萌芽を1本だけ残すと、その年に4〜5m伸び、まっすぐな幹が取れる（普通の桐の栽培法）", en:"[Staff only] Book \"Kiri\" (Rural Culture Association Japan, 2024), p.69 cut-back method: cutting at ground level the spring after planting and keeping one sprout gives 4–5 m of growth that year and a straight trunk (standard paulownia practice)"}, href:"https://www.amazon.co.jp/dp/B0DB4Y83YX"},
+            {type:"link", label:{ja:"【スタッフ専用】北イタリアの研究（Forests 2022）：台切りして芽を1本に絞り、5mまで枝打ちした木は、直径以外すべて最高等級（Po-A）", en:"[Staff only] Northern Italy study (Forests 2022): trees cut back, thinned to one shoot and pruned to 5 m graded best class (Po-A) except diameter"}, href:"https://www.mdpi.com/1999-4907/13/11/1841"}
+          ]}
       ]},
     {id:"where",
       q:{ja:"どんな場所に植えられますか？", en:"Where can it be planted?"},
@@ -167,8 +191,8 @@ window.KK_QA = [
              en:"No. Left alone it branches out and the trunk does not grow straight. Timber value lies in a straight trunk, so pruning and removing extra shoots are needed from early on. Because it grows fast, it also needs care early."}},
         {id:"where-cold",
           q:{ja:"寒い土地でも育ちますか？", en:"Will it grow in cold regions?"},
-          a:{ja:"早生桐には系統があり、合う気候が違います。寒さに強い系統の報告は主に海外のものです。当社の木では札幌市で育てている記録があります。土地ごとに確認します。",
-             en:"There are different lines of fast-growing paulownia suited to different climates. Reports of cold-hardy lines come mainly from overseas. We have a growth record from Sapporo. We check each site individually."}},
+          a:{ja:"早生桐には系統があり、合う気候が違います。寒さに強い系統の報告は主に海外のものです。当社の苗をご購入いただいた方に伺ったところ、札幌市でも育っています。土地ごとに確認します。",
+             en:"There are different lines of fast-growing paulownia suited to different climates. Reports of cold-hardy lines come mainly from overseas. According to a customer who bought our seedlings, it is also growing in Sapporo. We check each site individually."}},
         {id:"where-sick",
           q:{ja:"病気の心配はありますか？", en:"Are there disease concerns?"},
           a:{ja:"桐には「てんぐ巣病」という病気が知られています。日本の湿気の多い気候でどこまで強いかは、地域ごとに確かめていく必要があります。",
@@ -219,8 +243,8 @@ window.KK_QA = [
       ]},
     {id:"wood-sell",
       q:{ja:"育てた木は売れますか？", en:"Can the grown trees be sold?"},
-      a:{ja:"桐は原木市場でも「キリ」として取引されています。成木のまま、または加工して製品として売ることができ、売り先の紹介や加工もご相談いただけます。桐は一般の木材価格の統計に載らない木なので、値段はその都度の確認になります。",
-         en:"Paulownia is traded on log markets as \"kiri\". Trees can be sold as logs or processed into products. We can also advise on buyers and processing. Paulownia is not listed in general timber price statistics, so prices are checked case by case."},
+      a:{ja:"桐は原木市場でも「キリ」として取引されています。成木のまま、または加工して製品として売ることができ、売り先の紹介や加工先の案内も、場合によって行わせて頂く場合もございます。桐は一般の木材価格の統計に載らない木なので、値段はその都度の確認になります。",
+         en:"Paulownia is traded on log markets as \"kiri\". Trees can be sold as logs or processed into products. In some cases, we may also introduce buyers or processors. Paulownia is not listed in general timber price statistics, so prices are checked case by case."},
       note:{ja:"販売価格や収益をお約束するものではありません。", en:"We do not promise any sale price or income."}}
   ]
 },
@@ -230,12 +254,12 @@ window.KK_QA = [
   items:[
     {id:"cmp-table",
       q:{ja:"比べるとどう違いますか？", en:"How do they compare?"},
-      a:{ja:"いちばんの違いは、大人の木になるまでの年数と、伐ったあとに植え直しがいらないことです。",
+      a:{ja:"いちばんの違いは、成木になるまでの年数と、伐ったあとに植え直しがいらないことです。",
          en:"The main differences are the years to maturity and that no replanting is needed after harvest."},
       table:{
         head:{ja:["","早生桐","スギ","ヒノキ"], en:["","Fast-growing paulownia","Cedar","Cypress"]},
         rows:[
-          {ja:["大人の木まで","4〜5年","30〜40年","40〜50年"], en:["Years to maturity","4–5","30–40","40–50"]},
+          {ja:["成木まで","5〜6年（製品は3年目ごろから）","30〜40年","40〜50年"], en:["Years to maturity","5–6 (products from about year 3)","30–40","40–50"]},
           {ja:["伐ったあと","切り株からまた育つ","植え直し","植え直し"], en:["After harvest","Regrows from stump","Replant","Replant"]},
           {ja:["木の軽さ（水を1とした重さ）","0.29（桐）","0.38","0.44"], en:["Weight (water = 1)","0.29 (paulownia)","0.38","0.44"]}
         ]},
@@ -247,9 +271,14 @@ window.KK_QA = [
       more:[
         {id:"cmp-second",
           q:{ja:"2回目以降の木はどうですか？", en:"What about later harvests?"},
-          a:{ja:"手入れによって、最初に植えた木と同等の品質を得られます。2回目以降は切り株から芽がいくつも出るので、芽かきで1本に絞るなどの手入れが要ります。手入れをしないと幹が曲がって伸び、製品として使えなくなります。",
-             en:"With proper care, later harvests can reach quality equal to the first planted tree. From the second cycle, several shoots rise from each stump, so care such as thinning them to one is needed. Without care, the trunk grows crooked and cannot be used as a product."},
-          note:{ja:"仕上がりは、土地の環境やその年の天候によって変わります。", en:"Results vary with the site's environment and each year's weather."}}
+          a:{ja:"そのままだと品質は若干落ちるという報告がございますが、手入れ次第でほぼ同等の品質を保つこともできます。2回目以降は切り株から芽がいくつも出るので、芽かきで1本に絞るなどの手入れが要ります。手入れをしないと幹が曲がって伸び、製品として使えなくなります。",
+             en:"Left as it is, quality is reported to drop slightly, but with proper care it can be kept almost the same. From the second cycle, several shoots rise from each stump, so care such as thinning them to one is needed. Without care, the trunk grows crooked and cannot be used as a product."},
+          note:{ja:"仕上がりは、土地の環境やその年の天候によって変わります。", en:"Results vary with the site's environment and each year's weather."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】北イタリアの研究（Forests 2022）：植えて1年後に台切りして芽を1本に絞り、5mまで枝打ちした木は、直径以外すべて最高等級（Po-A）。台切りの跡に腐れなし", en:"[Staff only] Northern Italy study (Forests 2022): trees cut back one year after planting, thinned to one shoot and pruned to 5 m graded best class (Po-A) on all points except diameter; no rot at the cut"}, href:"https://www.mdpi.com/1999-4907/13/11/1841"},
+            {type:"link", label:{ja:"【スタッフ専用】書籍『桐（地域資源を活かす生活工芸双書）』（農文協・2024）69ページ「台切り法」：植えた翌春に地際で伐り、萌芽を1本だけ残すと、その年に4〜5m伸び、まっすぐな幹が取れる（普通の桐の栽培法）", en:"[Staff only] Book \"Kiri\" (Rural Culture Association Japan, 2024), p.69 cut-back method: cutting at ground level the spring after planting and keeping one sprout gives 4–5 m of growth that year and a straight trunk (standard paulownia practice)"}, href:"https://www.amazon.co.jp/dp/B0DB4Y83YX"}
+          ]}
       ]}
   ]
 },
@@ -271,9 +300,16 @@ window.KK_QA = [
       more:[
         {id:"co2-how",
           q:{ja:"どうやって測った数字ですか？", en:"How was this measured?"},
-          a:{ja:"当社が測った数字ではありません。福島県の3か所の植林地で行われた研究で、木の高さと幹の太さを年2回測り、実際に木を伐って重さを量って出した数字です。樹齢7.5年の木1本が吸ったCO₂は合計約319kg、1年あたりにすると約42kgです。この数字は国土交通省の資料にも載っています。",
-             en:"This is not a figure measured by our company. In a study carried out at three plantation sites in Fukushima, tree height and trunk size were measured twice a year, and trees were actually felled and weighed. A 7.5-year-old tree had absorbed about 319 kg of CO₂ in total, or about 42 kg a year. The figure also appears in a document of the Ministry of Land, Infrastructure, Transport and Tourism."},
-          note:{ja:"スタッフの方へ：この数字は京都皇帝早生桐で測ったものではなく、同系統の早生桐で測った数字です。", en:"For staff: this figure was not measured on Kyoto Emperor Paulownia but on a fast-growing paulownia of the same lineage."}},
+          a:{ja:"当社が測った数字ではありません。福島県の3か所の植林地で行われた研究で、木の高さと幹回りを年2回測り、実際に木を伐って重さを量って出した数字です。樹齢7.5年の木1本が吸ったCO₂は合計約319kg、1年あたりにすると約42kgです。この数字は国土交通省の資料にも載っています。",
+             en:"This is not a figure measured by our company. In a study carried out at three plantation sites in Fukushima, tree height and trunk girth were measured twice a year, and trees were actually felled and weighed. A 7.5-year-old tree had absorbed about 319 kg of CO₂ in total, or about 42 kg a year. The figure also appears in a document of the Ministry of Land, Infrastructure, Transport and Tourism."},
+          note:{ja:"スタッフの方へ：この数字は京都皇帝早生桐で測ったものではなく、同系統の早生桐で測った数字です。", en:"For staff: this figure was not measured on Kyoto Emperor Paulownia but on a fast-growing paulownia of the same lineage."},
+          blocks:[
+            {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
+            {type:"link", label:{ja:"【スタッフ専用】ナリコー早生桐（公式）：5〜6年で15〜17mは会社の説明／実測は2年3ヶ月で平均5.9m／萌芽は1年目で6m超えることがある", en:"[Staff only] Narikoh (official): 15–17 m in 5–6 years is the company's claim; measured 5.9 m average at 2 yrs 3 mos; coppice shoots may exceed 6 m in year 1"}, href:"https://www.narikoh.co.jp/souseigiri"},
+            {type:"link", label:{ja:"【スタッフ専用】成田空港×ナリコー（2022年11月）：42.5kgは成蹊大学の2021年3月の学会発表の数値", en:"[Staff only] Narita Airport x Narikoh (Nov 2022): 42.5 kg is from Seikei University's March 2021 conference paper"}, href:"https://www.narita-airport.jp/files/0e54fca95ae7873d64944a914e4b3faf3925957ddb68a14301399cd4dd6043dd"},
+            {type:"link", label:{ja:"【スタッフ専用】国土交通省の資料 19ページ：7.5年で0.319t、46.8tは1,100本を想定した試算", en:"[Staff only] MLIT document p.19: 0.319 t at 7.5 years; 46.8 t is an estimate assuming 1,100 trees/ha"}, href:"https://www.mlit.go.jp/koku/content/001475068.pdf"},
+            {type:"link", label:{ja:"【スタッフ専用】学会の要旨（成蹊大学・2021年）：福島県3か所・年2回・各20本を測定し伐って計量、6・7年で高さ15m", en:"[Staff only] Conference abstract (Seikei Univ., 2021): 3 sites in Fukushima, measured twice a year, 20 trees each, felled and weighed; 15 m at 6–7 years"}, href:"https://pub.confit.atlas.jp/ja/event/mmij2021a/presentation/3K0408-14-02"}
+          ]},
         {id:"co2-why",
           q:{ja:"木がCO₂を吸うとはどういうことですか？", en:"What does it mean for a tree to absorb CO₂?"},
           a:{ja:"木は光合成で空気中のCO₂から炭素を取り出し、幹や枝、根にして体に残します。木の体は、もともと空気だった炭素でできています。だから木の重さを量ると、吸ったCO₂の量が分かります。",
@@ -329,13 +365,21 @@ window.KK_QA = [
              en:"Yes, as a service charged separately from the seedlings."}},
         {id:"buy-flow",
           q:{ja:"ご相談の流れは？", en:"How does it work?"},
-          a:{ja:"①本数と場所をお知らせいただく ②土の状態や水はけを確認 ③お見積もり ④苗のお届け・植樹 ⑤お手入れ（ご希望の方）⑥5年目ごろに伐採、そして萌芽更新。",
-             en:"1) Tell us the quantity and site. 2) We check soil and drainage. 3) We send a quote. 4) Delivery and planting. 5) Maintenance if you wish. 6) Harvest around year five, then regrowth."}}
+          a:{ja:"ご相談は、苗の販売ページのお見積もりフォームから、または当社のメール（info@sansei-japan.com）に件名「【京都皇帝早生桐LP｜苗の販売】お見積もり依頼」を付けてお送りください。本数と植える場所をお書き添えください。",
+             en:"Please use the quote form on our seedling sales page, or email us at info@sansei-japan.com with the subject \"【京都皇帝早生桐LP｜苗の販売】お見積もり依頼\" (seedling quote request). Please include the number of seedlings and the planting site."},
+          blocks:[
+            {type:"link", label:{ja:"苗の販売ページのフォームへ", en:"Go to the seedling sales form"}, href:"https://sansei-japan.com/nae/#contact"},
+            {type:"link", label:{ja:"件名つきでメールを書く", en:"Write an email with the subject"}, href:"mailto:info@sansei-japan.com?subject=%E3%80%90%E4%BA%AC%E9%83%BD%E7%9A%87%E5%B8%9D%E6%97%A9%E7%94%9F%E6%A1%90LP%EF%BD%9C%E8%8B%97%E3%81%AE%E8%B2%A9%E5%A3%B2%E3%80%91%E3%81%8A%E8%A6%8B%E7%A9%8D%E3%82%82%E3%82%8A%E4%BE%9D%E9%A0%BC"}
+          ]}
       ]},
     {id:"buy-forest",
       q:{ja:"山ごと購入できますか？", en:"Can I buy a whole forest?"},
-      a:{ja:"はい。木材を大量にお使いの企業さま向けに、植林と手入れを終えた山をお譲りしています。所在地・面積は商談の場でお伝えし、現地のご視察もできます。",
-         en:"Yes. For companies that use a lot of timber, we offer forests already planted and maintained. Location and area are shared in a business meeting, and site visits are possible."}},
+      a:{ja:"はい。木材を大量にお使いの企業さま向けに、植林と手入れを終えた山をお譲りしています。ご相談は、山林の販売ページの商談フォームから、または当社のメール（info@sansei-japan.com）に件名「【京都皇帝早生桐LP｜山林の販売】商談のお申し込み」を付けてお送りください。",
+         en:"Yes. For companies that use a lot of timber, we offer forests already planted and maintained. Please use the business inquiry form on our forest sales page, or email us at info@sansei-japan.com with the subject \"【京都皇帝早生桐LP｜山林の販売】商談のお申し込み\" (forest business inquiry)."},
+      blocks:[
+        {type:"link", label:{ja:"山林の販売ページのフォームへ", en:"Go to the forest sales form"}, href:"https://sansei-japan.com/sanrin/#contact"},
+        {type:"link", label:{ja:"件名つきでメールを書く", en:"Write an email with the subject"}, href:"mailto:info@sansei-japan.com?subject=%E3%80%90%E4%BA%AC%E9%83%BD%E7%9A%87%E5%B8%9D%E6%97%A9%E7%94%9F%E6%A1%90LP%EF%BD%9C%E5%B1%B1%E6%9E%97%E3%81%AE%E8%B2%A9%E5%A3%B2%E3%80%91%E5%95%86%E8%AB%87%E3%81%AE%E3%81%8A%E7%94%B3%E3%81%97%E8%BE%BC%E3%81%BF"}
+      ]},
     {id:"buy-invest",
       q:{ja:"投資として儲かりますか？", en:"Is it a profitable investment?"},
       a:{ja:"収益や利回りをお約束するものではありません。個別の内容は、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
