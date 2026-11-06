@@ -77,7 +77,7 @@ window.KK_QA = [
           q:{ja:"親木（マザー）はひとつの個体だけですか？ 親木の成長記録はありますか？", en:"Is there only one mother tree? Are there growth records of the mother tree?"},
           a:{ja:"親木（マザー）の個体数、クローンの作り方、親木の記録などは、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
              en:"The number of mother trees, how the clones are made, and records of the mother tree fall under a different department at our head office, so we handle replies by making an inquiry to that department."},
-          note:{ja:"スタッフの方へ：親木があるか・いくつあるかを含め、推測でお答えしないでください。研究所・研究者・研究内容に話が進む答えも控えます。上の言い方でお伝えし、ご質問とご連絡先を本社へ。", en:"For staff: please do not guess, including whether a mother tree exists or how many. Also avoid answers that go into laboratories, researchers or research content. Answer as above, and pass the question and contact details to the head office."}}
+          note:{ja:"スタッフの方へ：親木があるか・いくつあるかを含め、推測でお答えしないでください。上の言い方でお伝えし、ご質問とご連絡先を本社へ。", en:"For staff: please do not guess, including whether a mother tree exists or how many. Answer as above, and pass the question and contact details to the head office."}}
       ]},
     {id:"why",
       q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
@@ -152,7 +152,7 @@ window.KK_QA = [
           q:{ja:"何回くらい収穫できますか？", en:"How many times can it be harvested?"},
           a:{ja:"同じ根で何回伐れるかは、育てる環境や手入れによりますが、外部の資料の数字の平均では、5〜6回ほどとなっております。根の寿命を70〜100年とする資料もあります。ただ、どの資料にも出典や実際に測った記録が示されていないため、目安としてお考えください。",
              en:"How many times the same roots can be harvested depends on the growing environment and care, but the average of figures in outside materials is about five to six times. Some materials put root life at 70 to 100 years. However, none of them show a source or measured records, so please treat this as a guide."},
-          note:{ja:"スタッフの方へ：外部の資料の平均値として載せると決めたのは Hikârư（2026-11-06）。平均は、各資料の回数の幅の真ん中をならした値（約5.5回）です。souseikiri.jp の「5〜7回・最大35年間」は出どころが見つかっていません。", en:"For staff: Hikârư decided (6 Nov 2026) to show this as an average of outside data. The average is the mean of the midpoints of each source's range (about 5.5). The source of \"5–7 times over up to 35 years\" on souseikiri.jp has not been found."},
+          note:{ja:"スタッフの方へ：回数は、外部の資料の数字の平均（約5.5回）です。", en:"For staff: the number is the average of figures in outside materials (about 5.5)."},
           blocks:[
             {type:"note", text:{ja:"【スタッフ専用の参考資料】お客様には案内しないでください。", en:"[Staff-only references] Do not show these to customers."}},
             {type:"link", label:{ja:"【スタッフ専用】paulownia.pro（スペインの苗木業者）：根の寿命70〜100年・4〜8/9回・出典なし", en:"[Staff only] paulownia.pro (Spanish grower): root life 70–100 yrs, 4–8/9 cycles, no source"}, href:"https://paulownia.pro/en/paulownia/"},
