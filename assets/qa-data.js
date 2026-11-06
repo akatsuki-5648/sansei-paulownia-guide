@@ -9,7 +9,7 @@
      {type:"table", head:{ja:[…],en:[…]}, rows:[{ja:[…],en:[…]}]}
      {type:"link",  href:"https://…", label:{ja,en}}
      {type:"note",  text:{ja,en}} */
-window.KK_VERSION = "2026-11-04";
+window.KK_VERSION = "2026-11-06";
 /* 画面の決まり文句 */
 window.KK_UI = {
   eyebrow:{ja:"ショールーム Q&A", en:"Showroom Q&A"},
@@ -18,7 +18,7 @@ window.KK_UI = {
         en:"Tap a question to open the answer. Open the items below an answer for more detail."},
   search:{ja:"キーワードで探す（例：苗、CO₂）", en:"Search by keyword (e.g. seedlings, CO₂)"},
   found:{ja:"{n}件見つかりました", en:"{n} found"},
-  none:{ja:"見つかりませんでした。「確認してご連絡します」とお伝えください。", en:"No results. Please say \"We will check and get back to you\"."},
+  none:{ja:"見つかりませんでした。無理にお答えせず、ご質問とご連絡先を控えて本社へお知らせください。", en:"No results. Please do not guess; note the question and contact details and pass them to the head office."},
   tel:{ja:"お電話でのご相談 075-748-9188", en:"Call us: +81-75-748-9188"},
   foot:{ja:"株式会社SANSEI｜数字は目安で、保証するものではありません。", en:"SANSEI Co., Ltd. | Figures are guides, not guarantees."},
   ver:{ja:"初期版 ", en:"First version "}
@@ -70,9 +70,14 @@ window.KK_QA = [
              en:"Paulownia has a honeycomb-like cell structure that makes it strong for its weight. Reports say this structure stays the same in fast-growing varieties. However, this guide has no figures from measuring our trees and ordinary paulownia side by side."}},
         {id:"diff-origin",
           q:{ja:"この品種はどうやって生まれたのですか？ 開発した方は？", en:"How did this variety originate, and who developed it?"},
-          a:{ja:"品種の成り立ち（開発の経緯と開発者）は、本社の記録で管理しています。正確にお答えするため、確認してご連絡します。",
-             en:"The origin of the variety (how and by whom it was developed) is kept in the head office's records. To answer accurately, we will check and get back to you."},
-          note:{ja:"スタッフの方へ：経緯を聞かれても、推測でお答えしないでください。「経緯は記録を確認して、正確にお伝えします」とお伝えし、ご質問とご連絡先を本社へ。商標登録は済み、種苗登録は申請中です（2026年8月時点・現在の状況は本社で確認）。", en:"For staff: if asked, please do not guess about the origin. Say \"We will check our records and tell you accurately\", and pass the question and contact details to the head office. The trademark is registered and the plant variety registration is pending (as of August 2026; check the current status with the head office)."}}
+          a:{ja:"品種の成り立ち（開発の経緯と開発者）は、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
+             en:"The origin of the variety (how and by whom it was developed) falls under a different department at our head office, so we handle replies by making an inquiry to that department."},
+          note:{ja:"スタッフの方へ：経緯を聞かれても、推測でお答えしないでください。上の言い方でお伝えし、ご質問とご連絡先を本社へ。商標登録は済み、種苗登録は申請中です（2026年8月時点・現在の状況は本社で確認）。", en:"For staff: if asked, please do not guess about the origin. Answer as above, and pass the question and contact details to the head office. The trademark is registered and the plant variety registration is pending (as of August 2026; check the current status with the head office)."}},
+        {id:"diff-mother",
+          q:{ja:"親木（マザー）はひとつの個体だけですか？ 親木の成長記録はありますか？", en:"Is there only one mother tree? Are there growth records of the mother tree?"},
+          a:{ja:"親木（マザー）の個体数、クローンの作り方、親木の記録などは、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
+             en:"The number of mother trees, how the clones are made, and records of the mother tree fall under a different department at our head office, so we handle replies by making an inquiry to that department."},
+          note:{ja:"スタッフの方へ：親木があるか・いくつあるかを含め、推測でお答えしないでください。研究所・研究者・研究内容に話が進む答えも控えます。上の言い方でお伝えし、ご質問とご連絡先を本社へ。", en:"For staff: please do not guess, including whether a mother tree exists or how many. Also avoid answers that go into laboratories, researchers or research content. Answer as above, and pass the question and contact details to the head office."}}
       ]},
     {id:"why",
       q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
@@ -129,19 +134,24 @@ window.KK_QA = [
           a:{ja:"桐は伐ったあとも切り株から育つので、植え直さずに何度も収穫できます。そのため、大きくなるまで待つより、決めた周期（5〜8年ごと）で伐って回す考え方をとります。長く育てるほど得になるとは限りません。海外（ネパール）の研究では、幹の太さが12年で30cmになり、それ以上育てても採算は上がらないと報告されています。スギ・ヒノキにも、地域ごとに「標準伐期齢」という標準的な伐採の年齢が決められています。",
              en:"Paulownia regrows from the stump, so it can be harvested many times without replanting. So rather than waiting until it is very large, we think in terms of a fixed cycle (every five to eight years). Longer is not always better: in an overseas study in Nepal, trunk thickness reached 30 cm at 12 years and growing longer did not improve profitability. Cedar and cypress also have a \"standard felling age\" set by region."},
           note:{ja:"長く育てると木に良くない、という記録は確認できていません。伐る時期は、使い道に必要な太さと、収穫を回す周期で決める目安です。", en:"We have not confirmed any record that longer growth harms the tree. The felling time is a guide based on the size needed and the harvest cycle."}},
+        {id:"regrow-vigor",
+          q:{ja:"一般的な桐の萌芽更新と比べて、何か良いところはありますか？", en:"Does its regrowth from the stump have any advantage over ordinary paulownia?"},
+          a:{ja:"桐は切り株から新しい芽が出る力がとても強い木で、京都皇帝早生桐もこの力を活かして育てます。伐採後は植え直さず、すでに張っている根から栄養を受け取って育つため、種から育てるよりも早い段階から成長が始まります。新しい芽は数週間ほどで小さな苗木の大きさになります。根が最初から張っているので、成長も早まる見込みで、早生桐としての回転率も上がると想定しています。植え直しの手間と苗代のコストはかからなくなり、2回目以降の手間とコストはぐんと減ります（芽かきなどの手入れは要ります）。",
+             en:"Paulownia has a very strong ability to sprout from the stump, and Kyoto Emperor Paulownia makes use of it. After harvesting there is no replanting: new shoots draw nutrients from roots that are already established, so growth starts earlier than when growing from seed. New shoots reach the size of a small sapling in a few weeks. Because the roots are already in place, we expect growth to be faster, and we anticipate a higher turnover as a fast-growing paulownia. The labour of replanting and the cost of seedlings disappear, and labour and cost from the second cycle drop sharply (care such as thinning shoots is still needed)."},
+          note:{ja:"「成長も早まる」「回転率が上がる」は当社の見込みと想定で、実測した数字はまだありません。一般の桐との比較は、実測を進めながら確認していきます。材の品質は、手入れによって同等の品質を得られます。", en:"\"Faster growth\" and \"higher turnover\" are our expectation and assumption; we have no measured figures yet. Comparison with ordinary paulownia will be confirmed as we measure. With proper care, equal wood quality can be obtained."}},
         {id:"regrow-times",
           q:{ja:"何回くらい収穫できますか？", en:"How many times can it be harvested?"},
           a:{ja:"根の寿命は70〜100年とされ、その間に4〜9回の伐採をくり返せるという報告があります。",
              en:"The roots are said to live 70 to 100 years, and reports say four to nine harvests are possible in that time."}},
         {id:"regrow-care",
           q:{ja:"2回目からの手入れは？", en:"What care is needed after the first harvest?"},
-          a:{ja:"切り株からは芽がいくつも出ます。そのままだと細い幹が何本もできるので、1本に絞る手入れがいります。",
-             en:"Several shoots rise from the stump. Left alone, they become many thin trunks, so they need to be pruned to one."}}
+          a:{ja:"切り株からは芽がいくつも出ます。そのままだと細い幹が何本もでき、曲がって伸びて製品になりません。1本に絞る手入れ（芽かき）をすれば、同等の品質を得られます。",
+             en:"Several shoots rise from the stump. Left alone, they become many thin, crooked trunks that cannot be used as products. Thinning them to one (shoot pruning) gives equal quality."}}
       ]},
     {id:"where",
       q:{ja:"どんな場所に植えられますか？", en:"Where can it be planted?"},
-      a:{ja:"いちばん大事なのは水はけです。水が溜まる土地では根が腐ってしまいます。あとは日当たりの良さです。日本なら、水やりをしなくても自然の雨で育つとされています。大分の試験圃場は、もとは15年以上使われていなかった休耕田で、土の対策をして植えました。場所は、ご相談の前に確認してご提案します。",
-         en:"Drainage matters most: roots rot where water collects. Good sunlight comes next. In Japan it is said to grow on natural rainfall without watering. Our trial field in Oita was a rice paddy left unused for over 15 years; we improved the soil before planting. We check each site and advise you."},
+      a:{ja:"いちばん大事なのは水はけです。水が溜まる土地では根が腐ってしまいます。あとは日当たりの良さです。日本なら、水やりをしなくても自然の雨で育つとされています。大分の試験圃場は、もとは15年以上使われていなかった休耕田で、土の対策をして植えました。植える場所のご相談は、ホームページのお問い合わせからお願いします。",
+         en:"Drainage matters most: roots rot where water collects. Good sunlight comes next. In Japan it is said to grow on natural rainfall without watering. Our trial field in Oita was a rice paddy left unused for over 15 years; we improved the soil before planting. For advice on a planting site, please use the inquiry form on our website."},
       more:[
         {id:"where-land",
           q:{ja:"使っていない田畑にも植えられますか？", en:"Can it be planted on unused farmland?"},
@@ -165,8 +175,8 @@ window.KK_QA = [
              en:"Paulownia is known to get witches' broom disease. How well it resists in Japan's humid climate needs to be confirmed region by region."}},
         {id:"where-spread",
           q:{ja:"周りに広がってしまいませんか？", en:"Could it spread into the surroundings?"},
-          a:{ja:"桐の仲間を外来種として注意している国や地域があります。海外では種を作らない品種も開発されています。国や地域によって決まりが違うので、海外でのご検討は担当者が確認します。",
-             en:"Some countries and regions treat paulownia species as invasive. Non-seeding varieties have been developed overseas. Rules differ by country and region, so a staff member will check for any overseas plans."}}
+          a:{ja:"桐の仲間を外来種として注意している国や地域があります。海外では種を作らない品種も開発されています。国や地域によって決まりが違います。海外でのご検討は、本社の別の部署の管轄です。",
+             en:"Some countries and regions treat paulownia species as invasive. Non-seeding varieties have been developed overseas. Rules differ by country and region, and overseas plans fall under a different department at our head office."}}
       ]}
   ]
 },
@@ -237,8 +247,9 @@ window.KK_QA = [
       more:[
         {id:"cmp-second",
           q:{ja:"2回目以降の木はどうですか？", en:"What about later harvests?"},
-          a:{ja:"海外の資料では、最初に植えた木より品質が少し落ちるとされています。それでも家具・建築・工芸には使える水準とされています。",
-             en:"Overseas sources say quality drops slightly from the first planted tree, but remains usable for furniture, construction and crafts."}}
+          a:{ja:"手入れによって、最初に植えた木と同等の品質を得られます。2回目以降は切り株から芽がいくつも出るので、芽かきで1本に絞るなどの手入れが要ります。手入れをしないと幹が曲がって伸び、製品として使えなくなります。",
+             en:"With proper care, later harvests can reach quality equal to the first planted tree. From the second cycle, several shoots rise from each stump, so care such as thinning them to one is needed. Without care, the trunk grows crooked and cannot be used as a product."},
+          note:{ja:"仕上がりは、土地の環境やその年の天候によって変わります。", en:"Results vary with the site's environment and each year's weather."}}
       ]}
   ]
 },
@@ -260,8 +271,9 @@ window.KK_QA = [
       more:[
         {id:"co2-how",
           q:{ja:"どうやって測った数字ですか？", en:"How was this measured?"},
-          a:{ja:"大学との共同研究で、福島県の3か所の植林地で木の高さと幹の太さを年2回測り、実際に木を伐って重さを量って出した数字です。樹齢7.5年の木1本が吸ったCO₂は合計約319kg、1年あたりにすると約42kgです。この数字は国土交通省の資料にも載っています。",
-             en:"In a joint study with a university, tree height and trunk size were measured twice a year at three plantation sites in Fukushima, and trees were actually felled and weighed. A 7.5-year-old tree had absorbed about 319 kg of CO₂ in total, or about 42 kg a year. The figure also appears in a document of the Ministry of Land, Infrastructure, Transport and Tourism."}},
+          a:{ja:"当社が測った数字ではありません。福島県の3か所の植林地で行われた研究で、木の高さと幹の太さを年2回測り、実際に木を伐って重さを量って出した数字です。樹齢7.5年の木1本が吸ったCO₂は合計約319kg、1年あたりにすると約42kgです。この数字は国土交通省の資料にも載っています。",
+             en:"This is not a figure measured by our company. In a study carried out at three plantation sites in Fukushima, tree height and trunk size were measured twice a year, and trees were actually felled and weighed. A 7.5-year-old tree had absorbed about 319 kg of CO₂ in total, or about 42 kg a year. The figure also appears in a document of the Ministry of Land, Infrastructure, Transport and Tourism."},
+          note:{ja:"スタッフの方へ：この数字は京都皇帝早生桐で測ったものではなく、同系統の早生桐で測った数字です。", en:"For staff: this figure was not measured on Kyoto Emperor Paulownia but on a fast-growing paulownia of the same lineage."}},
         {id:"co2-why",
           q:{ja:"木がCO₂を吸うとはどういうことですか？", en:"What does it mean for a tree to absorb CO₂?"},
           a:{ja:"木は光合成で空気中のCO₂から炭素を取り出し、幹や枝、根にして体に残します。木の体は、もともと空気だった炭素でできています。だから木の重さを量ると、吸ったCO₂の量が分かります。",
@@ -282,8 +294,8 @@ window.KK_QA = [
       note:{ja:"海外の報告を含みます。日本の土地で同じ結果になるとお約束するものではありません。", en:"This includes overseas reports. We do not promise the same results on land in Japan."}},
     {id:"credit",
       q:{ja:"カーボンクレジットになりますか？", en:"Can it generate carbon credits?"},
-      a:{ja:"現時点で、クレジットとして認定されたものではありません。お約束できる段階ではないため、詳しくは担当者がご説明します。",
-         en:"At present it has not been certified for carbon credits. We cannot make promises at this stage, so a staff member will explain the details."},
+      a:{ja:"現時点で、クレジットとして認定されたものではありません。お約束できる段階ではありません。これより詳しいことは、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
+         en:"At present it has not been certified for carbon credits. We cannot make promises at this stage. Anything further falls under a different department at our head office, so we handle replies by making an inquiry to that department."},
       more:[
         {id:"credit-why",
           q:{ja:"なぜすぐに認定されないのですか？", en:"Why isn't it certified yet?"},
@@ -326,12 +338,12 @@ window.KK_QA = [
          en:"Yes. For companies that use a lot of timber, we offer forests already planted and maintained. Location and area are shared in a business meeting, and site visits are possible."}},
     {id:"buy-invest",
       q:{ja:"投資として儲かりますか？", en:"Is it a profitable investment?"},
-      a:{ja:"収益や利回りをお約束するものではありません。ご検討の場合は、担当者が内容をご説明します。",
-         en:"We do not promise any return or yield. If you are considering it, a staff member will explain the details."}},
+      a:{ja:"収益や利回りをお約束するものではありません。個別の内容は、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
+         en:"We do not promise any return or yield. Individual details fall under a different department at our head office, so we handle replies by making an inquiry to that department."}},
     {id:"buy-abroad",
       q:{ja:"海外でも植えられますか？", en:"Can it be planted overseas?"},
-      a:{ja:"海外でのご希望は、担当者が個別にお伺いします。国や地域、ご希望の内容をお知らせください。",
-         en:"A staff member will discuss overseas plans with you individually. Please tell us your country or region and what you have in mind."}}
+      a:{ja:"海外でのご希望は、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。国や地域、ご希望の内容をお知らせください。",
+         en:"Overseas requests fall under a different department at our head office, so we handle replies by making an inquiry to that department. Please tell us your country or region and what you have in mind."}}
   ]
 },
 {
@@ -348,8 +360,8 @@ window.KK_QA = [
          en:"SANSEI Co., Ltd.\nKRP Building 2, 2F Room 201, 134 Chudoji Minamimachi, Shimogyo-ku, Kyoto 600-8813, Japan\nTel/Fax: +81-75-748-9188\nEmail: info@sansei-japan.com"}},
     {id:"co-unknown",
       q:{ja:"ここに答えがない時は？", en:"What if the answer is not here?"},
-      a:{ja:"無理にお答えせず、「確認してご連絡します」とお伝えください。ご質問とご連絡先を控えて、本社へお知らせください。",
-         en:"Please do not guess. Say \"We will check and get back to you\", note the question and contact details, and pass them to the head office."}}
+      a:{ja:"無理にお答えせず、ご質問とご連絡先を控えて、本社へお知らせください。お客様には「本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております」とお伝えします。",
+         en:"Please do not guess. Note the question and contact details and pass them to the head office. To the customer, say: \"This falls under a different department at our head office, so we handle replies by making an inquiry to that department.\""}}
   ]
 }
 ];
