@@ -9,7 +9,7 @@
      {type:"table", head:{ja:[…],en:[…]}, rows:[{ja:[…],en:[…]}]}
      {type:"link",  href:"https://…", label:{ja,en}}
      {type:"note",  text:{ja,en}} */
-window.KK_VERSION = "2026-11-06";
+window.KK_VERSION = "2026-11-08";
 /* 画面の決まり文句 */
 window.KK_UI = {
   eyebrow:{ja:"ショールーム Q&A", en:"Showroom Q&A"},
@@ -43,6 +43,7 @@ window.KK_QA = [
       q:{ja:"どんな木ですか？", en:"What kind of tree is this?"},
       a:{ja:"成長がとても早い桐です。当社が扱う品種を、クローン培養で増やしています。本格的に製品にできるのは植えて3年目ごろから、成木になるのは5〜6年が目安です。伐ったあとも切り株からまた育ちます。",
          en:"It is a very fast-growing paulownia. We propagate the variety we handle by clone culture. It can be used for products in earnest from about the third year, and becomes a mature tree in about five to six years. After harvest it grows back from the stump."},
+      note:{ja:"品種の成り立ちやクローン培養の詳しい方法につきましては、弊社の機密事項にあたるため、お答えいたしかねる場合がございます。", en:"The origin of the variety and the details of our clone culture are confidential company information, so we may be unable to answer questions about them."},
       more:[
         {id:"what-name",
           q:{ja:"「早生桐（そうせいぎり）」とは？", en:"What does \"Soseigiri\" mean?"},
@@ -70,14 +71,14 @@ window.KK_QA = [
              en:"Paulownia has a honeycomb-like cell structure that makes it strong for its weight. Reports say this structure stays the same in fast-growing varieties. However, this guide has no figures from measuring our trees and ordinary paulownia side by side."}},
         {id:"diff-origin",
           q:{ja:"この品種はどうやって生まれたのですか？ 開発した方は？", en:"How did this variety originate, and who developed it?"},
-          a:{ja:"品種の成り立ち（開発の経緯と開発者）は、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
-             en:"The origin of the variety (how and by whom it was developed) falls under a different department at our head office, so we handle replies by making an inquiry to that department."},
-          note:{ja:"スタッフの方へ：経緯を聞かれても、推測でお答えしないでください。上の言い方でお伝えし、ご質問とご連絡先を本社へ。商標登録は済み、種苗登録は申請中です（2026年8月時点・現在の状況は本社で確認）。", en:"For staff: if asked, please do not guess about the origin. Answer as above, and pass the question and contact details to the head office. The trademark is registered and the plant variety registration is pending (as of August 2026; check the current status with the head office)."}},
+          a:{ja:"品種の成り立ち（開発の経緯や開発者）につきましては、弊社の機密事項にあたるため、お答えいたしかねる場合がございます。あらかじめご了承ください。",
+             en:"The origin of the variety (how and by whom it was developed) is confidential company information, so we may be unable to answer questions about it. Thank you for your understanding."},
+          note:{ja:"スタッフの方へ：経緯を聞かれても、推測でお答えしないでください。上の言い方でお伝えください。本社へ回す必要はありません。商標登録は済み、種苗登録は申請中です（2026年8月時点・現在の状況は本社で確認）。", en:"For staff: if asked, please do not guess about the origin. Answer as above; there is no need to pass the question to the head office. The trademark is registered and the plant variety registration is pending (as of August 2026; check the current status with the head office)."}},
         {id:"diff-mother",
           q:{ja:"親木（マザー）はひとつの個体だけですか？ 親木の成長記録はありますか？", en:"Is there only one mother tree? Are there growth records of the mother tree?"},
-          a:{ja:"親木（マザー）の個体数、クローンの作り方、親木の記録などは、本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております。",
-             en:"The number of mother trees, how the clones are made, and records of the mother tree fall under a different department at our head office, so we handle replies by making an inquiry to that department."},
-          note:{ja:"スタッフの方へ：親木があるか・いくつあるかを含め、推測でお答えしないでください。上の言い方でお伝えし、ご質問とご連絡先を本社へ。", en:"For staff: please do not guess, including whether a mother tree exists or how many. Answer as above, and pass the question and contact details to the head office."}}
+          a:{ja:"親木（マザー）の個体数やクローンの作り方、親木の記録などにつきましては、弊社の機密事項にあたるため、お答えいたしかねる場合がございます。あらかじめご了承ください。",
+             en:"The number of mother trees, how the clones are made, records of the mother tree and similar matters are confidential company information, so we may be unable to answer questions about them. Thank you for your understanding."},
+          note:{ja:"スタッフの方へ：親木があるか・いくつあるかを含め、推測でお答えしないでください。上の言い方でお伝えください。本社へ回す必要はありません。", en:"For staff: please do not guess, including whether a mother tree exists or how many. Answer as above; there is no need to pass the question to the head office."}}
       ]},
     {id:"why",
       q:{ja:"なぜ今、桐なのですか？", en:"Why paulownia now?"},
@@ -396,16 +397,16 @@ window.KK_QA = [
   items:[
     {id:"co-clone",
       q:{ja:"苗はどう作っていますか？", en:"How are the seedlings produced?"},
-      a:{ja:"当社が扱う品種を、メリクロン（組織培養）というクローン培養で増やし、培養の棚から育苗ハウスへ移して育てます。一本一本が同じ性質を受け継いだ苗なので、育ちがそろい、手入れや収穫の計画が立てやすくなります。",
-         en:"We propagate the variety we handle by meristem (tissue) culture, a form of clone culture, then move the plants from culture shelves to nursery greenhouses. Each seedling inherits the same characteristics, so growth is even and care and harvests are easier to plan."}},
+      a:{ja:"当社が扱う品種を、メリクロン（組織培養）というクローン培養で増やし、培養の棚から育苗ハウスへ移して育てます。一本一本が同じ性質を受け継いだ苗なので、育ちがそろい、手入れや収穫の計画が立てやすくなります。培養の詳しい方法や研究の内容につきましては、弊社の機密事項にあたるため、お答えいたしかねる場合がございます。",
+         en:"We propagate the variety we handle by meristem (tissue) culture, a form of clone culture, then move the plants from culture shelves to nursery greenhouses. Each seedling inherits the same characteristics, so growth is even and care and harvests are easier to plan. The details of our culture methods and research are confidential company information, so we may be unable to answer questions about them."}},
     {id:"co-contact",
       q:{ja:"連絡先は？", en:"How can I contact you?"},
       a:{ja:"株式会社SANSEI\n〒600-8813 京都府京都市下京区中堂寺南町134番地 KRP2号館 2階201号室\nTEL・FAX：075-748-9188\nMAIL：info@sansei-japan.com",
          en:"SANSEI Co., Ltd.\nKRP Building 2, 2F Room 201, 134 Chudoji Minamimachi, Shimogyo-ku, Kyoto 600-8813, Japan\nTel/Fax: +81-75-748-9188\nEmail: info@sansei-japan.com"}},
     {id:"co-unknown",
       q:{ja:"ここに答えがない時は？", en:"What if the answer is not here?"},
-      a:{ja:"無理にお答えせず、ご質問とご連絡先を控えて、本社へお知らせください。お客様には「本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております」とお伝えします。",
-         en:"Please do not guess. Note the question and contact details and pass them to the head office. To the customer, say: \"This falls under a different department at our head office, so we handle replies by making an inquiry to that department.\""}}
+      a:{ja:"無理にお答えせず、ご質問とご連絡先を控えて、本社へお知らせください。お客様には「本社の別の部署の管轄ですので、お返事は部署への問い合わせをさせて頂いております」とお伝えします。ただし、苗の培養や研究、親木（マザー）、品種の成り立ちについてのご質問は、「弊社の機密事項にあたるため、お答えいたしかねる場合がございます」とお伝えし、本社へ回す必要はありません。",
+         en:"Please do not guess. Note the question and contact details and pass them to the head office. To the customer, say: \"This falls under a different department at our head office, so we handle replies by making an inquiry to that department.\" However, for questions about seedling culture or research, the mother trees, or the origin of the variety, say: \"As this is confidential company information, we may be unable to answer,\" and there is no need to pass them to the head office."}}
   ]
 }
 ];
