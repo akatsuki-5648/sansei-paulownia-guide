@@ -1,0 +1,145 @@
+/* 京都皇帝早生桐 写真ギャラリー
+   ・クラスは全部 kkg- で始まる（Q&A の kkqa- と同じ考え方。外の CSS と干渉しにくい）。
+   ・色・文字・余白は下の --kkg- を変えるだけで全体が変わる（Q&A と同じ色）。
+   ・1段だけ見た目を変える時は .kkg-sec--段のid を使う。
+   ・スマホ基準 → 900px で横並び（写真とその説明）。 */
+.kkg{
+  color-scheme:light;
+  --kkg-paper:#f8f5ec; --kkg-white:#fff; --kkg-cream:#f2ede1;
+  --kkg-forest:#18221a; --kkg-green:#2d6a4f; --kkg-mint:#cfe3d6; --kkg-gold:#a8843f; --kkg-gold-2:#c9a84c;
+  --kkg-ink:#1b2117; --kkg-ink-2:rgba(27,33,23,.72); --kkg-ink-3:rgba(27,33,23,.5); --kkg-line:rgba(27,33,23,.14);
+  --kkg-on-dark:#f8f5ec;
+  --kkg-sans:"Hiragino Sans","Yu Gothic UI","Yu Gothic","Noto Sans JP",system-ui,sans-serif;
+  --kkg-serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif JP",serif;
+  --kkg-radius:10px; --kkg-tap:44px; --kkg-gut:clamp(16px,4vw,32px); --kkg-width:1120px;
+
+  min-height:100vh;background:var(--kkg-paper);color:var(--kkg-ink);
+  font:400 16px/1.8 var(--kkg-sans);overflow-wrap:anywhere;-webkit-text-size-adjust:100%;
+}
+.kkg,.kkg *{box-sizing:border-box}
+.kkg-page{margin:0}
+.kkg-page.kkg-lock{overflow:hidden}
+
+/* 上の帯 */
+.kkg-bar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;
+  padding:8px var(--kkg-gut);padding-top:calc(8px + env(safe-area-inset-top));background:var(--kkg-paper);border-bottom:1px solid var(--kkg-line)}
+.kkg-back{display:inline-flex;align-items:center;gap:4px;min-height:var(--kkg-tap);padding:0 12px 0 8px;border:1px solid var(--kkg-forest);border-radius:6px;
+  color:var(--kkg-forest);text-decoration:none;font-size:15px;font-weight:600;white-space:nowrap}
+.kkg-back::before{content:"‹";font-size:22px;line-height:1}
+.kkg-logo{display:block;width:96px;height:auto;margin-right:auto}
+.kkg-lang{display:flex;flex:none;border:1px solid var(--kkg-forest);border-radius:6px;overflow:hidden}
+.kkg-lang__btn{min-height:var(--kkg-tap);padding:0 10px;border:0;background:transparent;color:inherit;font:inherit;font-size:14px;cursor:pointer}
+.kkg-lang__btn[aria-pressed="true"]{background:var(--kkg-forest);color:var(--kkg-on-dark)}
+
+/* はじめ */
+.kkg-intro{max-width:var(--kkg-width);margin:0 auto;padding:24px var(--kkg-gut) 8px}
+.kkg-intro__eyebrow{margin:0;color:var(--kkg-gold);font-size:14px;letter-spacing:.08em}
+.kkg-intro__title{margin:2px 0 8px;font:600 clamp(28px,7vw,40px)/1.3 var(--kkg-serif)}
+.kkg-intro__lead{margin:0;color:var(--kkg-ink-2);max-width:42em}
+.kkg-jump{position:sticky;top:calc(61px + env(safe-area-inset-top));z-index:15;background:var(--kkg-paper);border-bottom:1px solid var(--kkg-line)}
+.kkg-jump__in{max-width:var(--kkg-width);margin:0 auto;display:flex;gap:8px;overflow-x:auto;padding:10px var(--kkg-gut);scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.kkg-jump__in::-webkit-scrollbar{display:none}
+.kkg-chip{flex:none;display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border:1px solid var(--kkg-line);border-radius:20px;
+  background:var(--kkg-white);color:var(--kkg-ink);text-decoration:none;font-size:14px;font-weight:600;white-space:nowrap}
+.kkg-chip small{color:var(--kkg-ink-3);font-weight:500}
+.kkg-chip[aria-current="true"]{background:var(--kkg-forest);border-color:var(--kkg-forest);color:var(--kkg-on-dark)}
+.kkg-chip[aria-current="true"] small{color:rgba(248,245,236,.7)}
+
+/* 段 */
+.kkg-sec{scroll-margin-top:calc(122px + env(safe-area-inset-top));background:var(--kkg-white)}
+.kkg-sec:nth-of-type(even){background:var(--kkg-paper)}
+.kkg-wrap{max-width:var(--kkg-width);margin:0 auto;padding:48px var(--kkg-gut);display:grid;grid-template-columns:minmax(0,1fr);
+  grid-template-areas:"head" "stage" "thumbs" "plan";row-gap:18px}
+.kkg-head{grid-area:head} .kkg-stage{grid-area:stage} .kkg-thumbs-wrap{grid-area:thumbs;min-width:0} .kkg-plan{grid-area:plan;min-width:0}
+.kkg-kicker{margin:0 0 4px;color:var(--kkg-gold);font-weight:700;letter-spacing:.14em;font-size:13px}
+.kkg-title{margin:0;font:700 clamp(24px,5.6vw,34px)/1.3 var(--kkg-serif);color:var(--kkg-forest)}
+.kkg-lead{margin:12px 0 0;color:var(--kkg-ink-2);font-size:15px;line-height:1.9}
+
+/* 大きい写真 */
+.kkg-fig{position:relative;margin:0;aspect-ratio:4/5;border-radius:var(--kkg-radius);overflow:hidden;background:var(--kkg-forest);
+  box-shadow:0 8px 28px rgba(0,0,0,.18);cursor:zoom-in}
+.kkg-fig__img{display:block;width:100%;height:100%;object-fit:cover;transition:opacity .2s ease}
+.kkg-fig__img.is-wide{object-fit:contain}
+.kkg-fig__img.is-fading{opacity:0}
+.kkg-fig__cap{position:absolute;left:0;right:0;bottom:0;margin:0;padding:44px 16px 14px;background:linear-gradient(transparent,rgba(10,25,15,.85));
+  color:#fff;font-size:15px;line-height:1.6}
+.kkg-fig__count{position:absolute;top:12px;left:12px;padding:2px 10px;border-radius:12px;background:rgba(10,25,15,.6);color:#fff;font-size:13px}
+.kkg-btn{position:absolute;display:flex;align-items:center;justify-content:center;width:var(--kkg-tap);height:var(--kkg-tap);padding:0;border:0;border-radius:50%;
+  background:rgba(10,25,15,.5);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+.kkg-btn:hover{background:rgba(10,25,15,.8)}
+.kkg-btn:focus-visible,.kkg-th:focus-visible,.kkg-chip:focus-visible,.kkg-back:focus-visible,.kkg-step__go:focus-visible{outline:3px solid var(--kkg-gold-2);outline-offset:2px}
+.kkg-btn--prev{left:8px;top:50%;transform:translateY(-50%)} .kkg-btn--next{right:8px;top:50%;transform:translateY(-50%)}
+.kkg-btn--zoom{right:8px;top:8px;font-size:18px}
+
+/* 小さい写真 */
+.kkg-group+.kkg-group{margin-top:14px}
+.kkg-group__label{margin:0 0 6px;font-size:14px;font-weight:700;color:var(--kkg-green)}
+.kkg-group__label small{margin-left:6px;color:var(--kkg-ink-3);font-weight:500}
+.kkg-thumbs{display:flex;gap:6px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:4px;-webkit-overflow-scrolling:touch}
+.kkg-th{flex:0 0 64px;aspect-ratio:3/4;padding:0;margin:0;border:2px solid transparent;border-radius:6px;overflow:hidden;background:var(--kkg-cream);
+  opacity:.72;cursor:pointer;scroll-snap-align:start;transition:opacity .2s,border-color .2s}
+.kkg-th img{display:block;width:100%;height:100%;object-fit:cover}
+.kkg-th:hover{opacity:1} .kkg-th[aria-current="true"]{opacity:1;border-color:var(--kkg-gold-2)}
+
+/* 植林の予定と歩み */
+.kkg-plan__label{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--kkg-green)}
+.kkg-bar-n{display:flex;height:12px;border-radius:6px;overflow:hidden;background:var(--kkg-cream);margin-bottom:12px}
+.kkg-bar-n span{display:block}
+.kkg-bar-n .s1{background:var(--kkg-gold-2)}
+.kkg-bar-n .s2{background:repeating-linear-gradient(45deg,#b7dcc6 0 8px,#d4ebdd 8px 16px)}
+.kkg-bar-n .s3{background:repeating-linear-gradient(45deg,#dfe7e1 0 8px,#eef3ef 8px 16px)}
+.kkg-phases{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0;padding:0}
+.kkg-phase{display:flex;flex-direction:column;gap:1px;padding:2px 0 2px 8px;border-left:3px solid var(--kkg-mint);line-height:1.5}
+.kkg-phase.is-done{border-left-color:var(--kkg-gold-2)}
+.kkg-phase b{font-size:13px;color:var(--kkg-green)}
+.kkg-phase__n{font-size:20px;font-weight:900;color:var(--kkg-forest);line-height:1.2}
+.kkg-phase__n small{margin-left:2px;font-size:12px;font-weight:500}
+.kkg-phase__when{font-size:12px;color:var(--kkg-ink-2)} .kkg-phase.is-done .kkg-phase__when{color:#8a6c1c;font-weight:700}
+.kkg-phase__sum{font-size:12px;color:var(--kkg-green);font-weight:700}
+.kkg-steps{list-style:none;margin:20px 0 0;padding:0;position:relative}
+.kkg-steps::before{content:"";position:absolute;left:7px;top:6px;bottom:6px;width:2px;background:var(--kkg-mint)}
+.kkg-step{position:relative;padding:0 0 10px 26px;line-height:1.55}
+.kkg-step::before{content:"";position:absolute;left:2px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--kkg-white);border:2px solid var(--kkg-green)}
+.kkg-step.is-past::before{background:var(--kkg-green)}
+.kkg-step.is-now::before{background:var(--kkg-gold-2);border-color:var(--kkg-gold-2);box-shadow:0 0 0 4px rgba(201,168,76,.25)}
+.kkg-step__when{display:block;font-size:12px;font-weight:700;color:var(--kkg-green)}
+.kkg-step__what{font-size:14px}
+.kkg-step.is-future .kkg-step__what{color:var(--kkg-ink-2)}
+.kkg-step__now{display:inline-block;margin-left:6px;padding:0 8px;border-radius:10px;background:var(--kkg-gold-2);color:var(--kkg-forest);font-size:12px;font-weight:700}
+.kkg-step__go{margin-left:4px;padding:2px 6px;min-height:28px;border:0;background:transparent;color:var(--kkg-green);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer}
+
+/* 大きく見る */
+.kkg-lb{position:fixed;inset:0;z-index:1000;display:flex;align-items:center;justify-content:center;background:rgba(5,15,10,.95)}
+.kkg-lb[hidden]{display:none}
+.kkg-lb__fig{margin:0;text-align:center}
+.kkg-lb__img{display:block;max-width:94vw;max-height:80vh;width:auto;height:auto;margin:0 auto;border-radius:6px}
+.kkg-lb__cap{margin-top:10px;padding:0 16px;color:#fff;font-size:15px}
+.kkg-lb .kkg-btn{background:rgba(255,255,255,.14);width:48px;height:48px}
+.kkg-lb .kkg-btn:hover{background:rgba(255,255,255,.28)}
+.kkg-lb .kkg-btn--close{top:calc(12px + env(safe-area-inset-top));right:12px;font-size:28px}
+.kkg-lb .kkg-btn--prev{left:12px} .kkg-lb .kkg-btn--next{right:12px}
+.kkg-lb__count{position:absolute;top:calc(24px + env(safe-area-inset-top));left:20px;color:rgba(255,255,255,.75);font-size:14px}
+
+/* 下 */
+.kkg-foot{max-width:var(--kkg-width);margin:0 auto;padding:28px var(--kkg-gut) calc(36px + env(safe-area-inset-bottom));text-align:center}
+.kkg-foot__tel{display:inline-flex;align-items:center;min-height:var(--kkg-tap);padding:0 18px;border-radius:6px;background:var(--kkg-forest);color:var(--kkg-on-dark);text-decoration:none;font-weight:600}
+.kkg-foot__text{margin:12px 0 0;color:var(--kkg-ink-2);font-size:14px}
+.kkg-foot__copy{margin:6px 0 0;color:var(--kkg-ink-3);font-size:12px}
+
+@media (min-width:600px){
+  .kkg-th{flex-basis:72px}
+}
+@media (min-width:900px){
+  .kkg-wrap{grid-template-columns:minmax(0,440px) minmax(0,1fr);grid-template-areas:"stage head" "stage thumbs" "stage plan";
+    grid-template-rows:auto auto 1fr;column-gap:48px;row-gap:22px;align-items:start;padding:72px var(--kkg-gut)}
+  .kkg-sec:nth-of-type(even) .kkg-wrap{grid-template-columns:minmax(0,1fr) minmax(0,440px);grid-template-areas:"head stage" "thumbs stage" "plan stage"}
+  .kkg-fig{aspect-ratio:3/4;max-height:600px}
+  .kkg-stage{position:sticky;top:140px}
+  .kkg-thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));overflow:visible}
+  .kkg-th{flex:none}
+}
+@media (max-width:899px){
+  .kkg-fig{max-width:520px;margin:0 auto}
+  .kkg-lb .kkg-btn--prev,.kkg-lb .kkg-btn--next{top:auto;bottom:calc(16px + env(safe-area-inset-bottom));transform:none}
+}
+@media (prefers-reduced-motion:reduce){.kkg-fig__img,.kkg-th{transition:none}}
