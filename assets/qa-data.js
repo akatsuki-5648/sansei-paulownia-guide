@@ -9,7 +9,7 @@
      {type:"table", head:{ja:[…],en:[…]}, rows:[{ja:[…],en:[…]}]}
      {type:"link",  href:"https://…", label:{ja,en}}
      {type:"note",  text:{ja,en}} */
-window.KK_VERSION = "2026-11-11";
+window.KK_VERSION = "2026-11-11b";
 /* 画面の決まり文句 */
 window.KK_UI = {
   eyebrow:{ja:"ショールーム Q&A", en:"Showroom Q&A"},
@@ -49,15 +49,15 @@ window.KK_QA = [
           q:{ja:"「早生桐（そうせいぎり）」とは？", en:"What does \"Soseigiri\" mean?"},
           a:{ja:"「早生」は早く育つこと、「桐」は日本で古くから使われてきた木です。早く育つ桐という意味です。",
              en:"\"Sosei\" means early growing, and \"kiri\" is paulownia, a tree long used in Japan. Together: fast-growing paulownia."}},
-        {id:"what-read",
-          q:{ja:"「早生桐」「早生樹」はどう読みますか？", en:"How do you read \"早生桐\" and \"早生樹\"?"},
-          a:{ja:"「早生桐」の読み方は、決まった定めがありません。「そうせいぎり」「そうせいきり」「わせぎり」など、どの読みでも構いません。ただし当社の「京都皇帝早生桐」は「きょうとこうていそうせいぎり」の読みで商標登録しています。当社のサイト souseikiri.jp の綴りどおり、はじめは「そうせいきり」とも読んでいましたが、口に出すと言いにくいため、今は自然に「そうせいぎり」と呼んでいます。「早生樹」は「そうせいじゅ」と読みます。早く育つ木をまとめて呼ぶ言葉です。",
-             en:"There is no fixed reading for \"早生桐\"; \"Soseigiri\", \"Soseikiri\" and \"Wasegiri\" are all fine. Our \"京都皇帝早生桐\" is registered as a trademark with the reading \"Kyoto Kotei Soseigiri\". We used to say \"Soseikiri\", as our website souseikiri.jp is spelled, but it is hard to say in Japanese, so we now naturally call it \"Soseigiri\". \"早生樹\" is read \"Soseiju\", a general word for fast-growing trees."}},
         {id:"what-history",
           q:{ja:"桐は日本とどんな関わりがありますか？", en:"How is paulownia connected to Japan?"},
           a:{ja:"桐箪笥や琴、下駄など、暮らしの中で長く使われてきました。昔は「娘が生まれたら桐を植え、嫁入りの時に伐って箪笥を作る」といわれたほど、早く育つ木として知られています。「五七の桐」は日本政府の紋章としても使われています。",
              en:"Paulownia has long been part of daily life in Japan, in chests of drawers, koto harps and geta sandals. People used to say, \"When a daughter is born, plant a paulownia, and make a chest from it when she marries.\" The \"go-shichi no kiri\" crest is also used as an emblem of the Government of Japan."}}
       ]},
+    {id:"what-read",
+      q:{ja:"「早生桐」「早生樹」はどう読みますか？", en:"How do you read \"早生桐\" and \"早生樹\"?"},
+      a:{ja:"「早生桐」の読み方は、決まった定めがありません。「そうせいぎり」「そうせいきり」「わせぎり」など、どの読みでも構いません。ただし当社の「京都皇帝早生桐」は「きょうとこうていそうせいぎり」の読みで商標登録しています。当社のサイト souseikiri.jp の綴りどおり、はじめは「そうせいきり」とも読んでいましたが、口に出すと言いにくいため、今は自然に「そうせいぎり」と呼んでいます。「早生樹」は「そうせいじゅ」と読みます。早く育つ木をまとめて呼ぶ言葉です。",
+         en:"There is no fixed reading for \"早生桐\"; \"Soseigiri\", \"Soseikiri\" and \"Wasegiri\" are all fine. Our \"京都皇帝早生桐\" is registered as a trademark with the reading \"Kyoto Kotei Soseigiri\". We used to say \"Soseikiri\", as our website souseikiri.jp is spelled, but it is hard to say in Japanese, so we now naturally call it \"Soseigiri\". \"早生樹\" is read \"Soseiju\", a general word for fast-growing trees."}},
     {id:"diff",
       q:{ja:"普通の桐と、何が違いますか？", en:"How is it different from ordinary paulownia?"},
       a:{ja:"いちばんの違いは、成木になるまでの早さです。普通の桐が成木になるまで15〜20年ほどとされるのに対し、京都皇帝早生桐は5〜6年が目安です（製品には3年目ごろから使えます）。木としての性質（軽い、湿気を吸ったり放したりする、虫が寄りにくい）は、桐の仲間のものです。",
